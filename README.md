@@ -4,6 +4,7 @@
 
 This is "Lisää githubia"
 
+Creating a desync
 
 [gitlog.txt](https://github.com/JuusoVe/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
 
