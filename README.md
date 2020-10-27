@@ -1,14 +1,9 @@
-# This is an <h1> tag
-## This is an <h2> tag
-###### This is an <h6> tag
+# Ohjelmistotekniikka, harjoitustyö
+## Tehtävät
+### Viikko 1
+
+https://github.com/JuusoVe/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt
+https://github.com/JuusoVe/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt
 
 
-some normal text here in between the amazing stuffs
 
-*This text will be italic*
-_This will also be italic_
-
-**This text will be bold**
-__This will also be bold__
-
-_You **can** combine them_
