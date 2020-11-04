@@ -1,10 +1,10 @@
-#Requirements
+# Requirements
 
-##Purpose of the application
+## Purpose of the application
 
-##User roles
+## User roles
 -Only basic user at first
 -Possibly an admin role later 
-##UI draft
+## UI draft
 
-##Basic Functionality
+## Basic Functionality
