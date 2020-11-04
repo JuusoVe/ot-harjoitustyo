@@ -11,7 +11,7 @@ The applications has 4 views
 - Main view for the review
 - Advanced view for smell&taste
 - Advanced view for beer details
-[UI views](https://github.com/JuusoVe/ot-harjoitustyo/blob/master/documentation/ui_views.jpg?raw=true)
+![UI views!](https://github.com/JuusoVe/ot-harjoitustyo/blob/master/documentation/ui_views.jpg?raw=true)
 ## Basic Functionality
 - The application open to list view
 - Input fields for data and rating of beer characteristics
