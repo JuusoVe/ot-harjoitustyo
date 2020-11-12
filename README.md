@@ -1,4 +1,12 @@
-# Ohjelmistotekniikka, harjoitustyö
+# Ohjelmistotekniikka, harjoitustyö: BeerRating
 
-[Tuntikirjanpito.md](https://github.com/JuusoVe/ot-harjoitustyo/blob/master/documentation/tuntikirjanpito.md) <br>
-[initial_requirements.md](https://github.com/JuusoVe/ot-harjoitustyo/blob/master/documentation/initial_requirements.md)
+The application guides the user through the process of reviewing a beer.
+
+It is being built as a course assignment for Helsinki University's course Ohjelmistotekniikka.
+
+## Documentation
+
+[initial_requirements.md](https://github.com/JuusoVe/ot-harjoitustyo/blob/master/documentation/initial_requirements.md) <br>
+[Tuntikirjanpito.md](https://github.com/JuusoVe/ot-harjoitustyo/blob/master/documentation/tuntikirjanpito.md) 
+
+
