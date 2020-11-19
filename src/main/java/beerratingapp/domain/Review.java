@@ -20,6 +20,22 @@ public class Review {
     private final int[] weights = {1,3,5,1};
     private double average;
 
+    public Review(int id, String name, String brewery, String style, String date, String notes, double ABV, double IBU, double OG, int[] partScores, double average) {
+        this.id = id;
+        this.name = name;
+        this.brewery = brewery;
+        this.style = style;
+        this.date = date;
+        this.notes = notes;
+        this.ABV = ABV;
+        this.IBU = IBU;
+        this.OG = OG;
+        this.partScores = partScores;
+        this.average = average;
+    }
+    
+    
+
     public Review(int id, int[] partScores) {
         this.id = id;
         this.partScores = new int[4];
@@ -50,6 +66,10 @@ public class Review {
         }
         this.partScores = partScores;
     }
+
+    public void setId(int id) {
+        this.id = id;
+    }
     
     public void setName(String name) {
         this.name = name;
@@ -62,7 +82,7 @@ public class Review {
     public void setStyle(String style) {
         this.style = style;
     }
-
+    
     public void setDate(String date) {
         this.date = date;
     }
@@ -89,6 +109,46 @@ public class Review {
 
     public double getAverage() {
         return average;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getBrewery() {
+        return brewery;
+    }
+
+    public String getStyle() {
+        return style;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public String getNotes() {
+        return notes;
+    }
+
+    public double getABV() {
+        return ABV;
+    }
+
+    public double getIBU() {
+        return IBU;
+    }
+
+    public double getOG() {
+        return OG;
+    }
+
+    public int[] getWeights() {
+        return weights;
     }
     
     

@@ -10,6 +10,7 @@
 |12.11.2020|3|creating first version review class and tests
 |12.11.2020|1|configuring maven and jacoco for the project
 |12.11.2020|2|setting up remote access to test the project on a linux computer and doing so
+|19.11.2020|2|Studing the DAO-model and the reference app|
 |-----------|------------|------------------------------------------|
 |TOTAL|11|	|
 
