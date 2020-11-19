@@ -9,9 +9,6 @@ import beerratingapp.dao.FileBeerRatingDao;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        //do something to start the app;
-        
-        
         
         File file = new File("resources/TestFile.txt");
         System.out.println("file we're passing to dao: " + file.toString());
@@ -24,9 +21,9 @@ public class Main {
         System.out.println("some content from first review: " + rev.getNotes());
         
         int[] parts = new int[4];
-        Review newRev = new Review(666,"myBeer","myBrewery","myStyle",
-                "June 6th 2020","tastes like well fermented piss",
-                4.8,13,1.046,new int[]{1, 2 ,3 ,4},2.2);
+        Review newRev = new Review(666, "myBeer", "myBrewery", "myStyle", 
+                "June 6th 2020", "tastes like well fermented piss", 
+                4.8, 13, 1.046, new int[]{1, 2, 3, 4}, 2.2);
         brdao.create(newRev);
        
         

@@ -57,9 +57,9 @@ public class FileBeerRatingDaoTest {
         assertEquals("testSty", review.getStyle());
         assertEquals("testDate", review.getDate());
         assertEquals("a made up highly elitist description", review.getNotes());
-        assertTrue(6.5 == review.getABV());
-        assertTrue(40 == review.getIBU());
-        assertTrue(1.055 == review.getOG());
+        assertTrue(6.5 == review.getAbv());
+        assertTrue(40 == review.getIbu());
+        assertTrue(1.055 == review.getOg());
         assertTrue(4 == review.getPartScores().length);
         assertTrue(3.0 == review.getAverage());
     }

@@ -28,17 +28,17 @@ public class FileBeerRatingDao implements BeerRatingDao {
                 String style = parts[3];
                 String date = parts[4];
                 String notes = parts[5];   
-                double ABV = Double.parseDouble(parts[6]);
-                double IBU = Double.parseDouble(parts[7]);
-                double OG = Double.parseDouble(parts[8]);
+                double abv = Double.parseDouble(parts[6]);
+                double ibu = Double.parseDouble(parts[7]);
+                double og = Double.parseDouble(parts[8]);
                 int[] partScores = new int[4];
                 String[] partialParts = parts[9].split(",");
-                for(int i = 0; i < partialParts.length; i++) {
-                partialParts[i] = partialParts[i].trim(); 
-                partScores[i] = Integer.parseInt(partialParts[i]);
+                for (int i = 0; i < partialParts.length; i++) {
+                    partialParts[i] = partialParts[i].trim(); 
+                    partScores[i] = Integer.parseInt(partialParts[i]);
                 }
                 double average = Double.parseDouble(parts[10]);
-                Review review = new Review(id, name, brewery, style, date, notes, ABV, IBU, OG, partScores, average);
+                Review review = new Review(id, name, brewery, style, date, notes, abv, ibu, og, partScores, average);
                 reviewslist.add(review);
             }
         } catch (Exception e) {
@@ -48,13 +48,13 @@ public class FileBeerRatingDao implements BeerRatingDao {
         
     }
     
-        private void save() throws Exception{
+    private void save() throws Exception {
         try (FileWriter writer = new FileWriter(new File(file))) {
             for (Review review: reviewslist) {
                 writer.write(review.getId() + ";" + review.getName() + ";" + review.getBrewery() + ";" +
-                review.getStyle() + ";" + review.getDate() + ";" + review.getNotes() + ";" + review.getABV() + ";" +
-                review.getIBU() + ";" + review.getOG() + ";" + review.getPartScores()[0] + "," + review.getPartScores()[1] +
-                "," + review.getPartScores()[2] + "," + review.getPartScores()[3] + ";" + review.getAverage() +"\n");
+                    review.getStyle() + ";" + review.getDate() + ";" + review.getNotes() + ";" + review.getAbv() + ";" +
+                    review.getIbu() + ";" + review.getOg() + ";" + review.getPartScores()[0] + "," + review.getPartScores()[1] +
+                    "," + review.getPartScores()[2] + "," + review.getPartScores()[3] + ";" + review.getAverage() + "\n");
             }
         }
     }    
