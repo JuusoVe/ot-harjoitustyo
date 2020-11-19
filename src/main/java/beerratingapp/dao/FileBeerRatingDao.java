@@ -3,7 +3,6 @@ package beerratingapp.dao;
 import java.io.File;
 import java.io.FileWriter;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 import beerratingapp.domain.Review;
 /**
@@ -12,10 +11,11 @@ import beerratingapp.domain.Review;
  */
 public class FileBeerRatingDao implements BeerRatingDao {
     
-    public List<Review> reviewslist;
+    public ArrayList<Review> reviewslist;
     private String file;
     
     public FileBeerRatingDao(String file) throws Exception {
+        System.out.println(file);
         reviewslist = new ArrayList<>();
         this.file = file;
         try {
@@ -35,8 +35,6 @@ public class FileBeerRatingDao implements BeerRatingDao {
                 String[] partialParts = parts[9].split(",");
                 for(int i = 0; i < partialParts.length; i++) {
                 partialParts[i] = partialParts[i].trim(); 
-                partialParts[i] = partialParts[i].replace("[", "");
-                partialParts[i] = partialParts[i].replace("]", "");
                 partScores[i] = Integer.parseInt(partialParts[i]);
                 }
                 double average = Double.parseDouble(parts[10]);
@@ -53,9 +51,10 @@ public class FileBeerRatingDao implements BeerRatingDao {
         private void save() throws Exception{
         try (FileWriter writer = new FileWriter(new File(file))) {
             for (Review review: reviewslist) {
-                writer.write(review.getId() + ";" + review.getName() + ";" + review.getName() + ";" + review.getBrewery() + ";" +
+                writer.write(review.getId() + ";" + review.getName() + ";" + review.getBrewery() + ";" +
                 review.getStyle() + ";" + review.getDate() + ";" + review.getNotes() + ";" + review.getABV() + ";" +
-                review.getIBU() + ";" + review.getOG() + ";" + review.getPartScores().toString() + ";" + review.getAverage() + ";" +"\n");
+                review.getIBU() + ";" + review.getOG() + ";" + review.getPartScores()[0] + "," + review.getPartScores()[1] +
+                "," + review.getPartScores()[2] + "," + review.getPartScores()[3] + ";" + review.getAverage() +"\n");
             }
         }
     }    
@@ -65,7 +64,7 @@ public class FileBeerRatingDao implements BeerRatingDao {
     }
     
     @Override
-    public List<Review> getAll() {
+    public ArrayList<Review> getAll() {
         return reviewslist;
     }
     
@@ -75,7 +74,7 @@ public class FileBeerRatingDao implements BeerRatingDao {
         reviewslist.add(review);
         save();
         return review;
-    }   
+    }
     
 
     
