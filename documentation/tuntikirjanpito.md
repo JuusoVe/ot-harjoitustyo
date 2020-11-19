@@ -11,7 +11,9 @@
 |12.11.2020|1|configuring maven and jacoco for the project
 |12.11.2020|2|setting up remote access to test the project on a linux computer and doing so
 |19.11.2020|2|Studing the DAO-model and the reference app
-|19.11.2020|5|wrote first version of DAO and FileDAO
+|19.11.2020|4|wrote first version of DAO and FileDAO
+|19.11.2020|1|made unit tests to FileDAO
+|19.11.2020|1|Added checkstyle to the project, fixed a bunch of style errors
 |-----------|------------|------------------------------------------|
 |TOTAL|11|	|
 
