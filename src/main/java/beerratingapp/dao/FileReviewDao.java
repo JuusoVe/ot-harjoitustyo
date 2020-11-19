@@ -9,12 +9,12 @@ import beerratingapp.domain.Review;
  *
  * @author juuso
  */
-public class FileBeerRatingDao implements BeerRatingDao {
+public class FileReviewDao implements ReviewDao {
     
     public ArrayList<Review> reviewslist;
     private String file;
     
-    public FileBeerRatingDao(String file) throws Exception {
+    public FileReviewDao(String file) throws Exception {
         System.out.println(file);
         reviewslist = new ArrayList<>();
         this.file = file;

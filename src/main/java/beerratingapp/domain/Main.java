@@ -2,8 +2,8 @@ package beerratingapp.domain;
 
 import java.io.File;
 import java.util.ArrayList;
-import beerratingapp.dao.BeerRatingDao;
-import beerratingapp.dao.FileBeerRatingDao;
+import beerratingapp.dao.FileReviewDao;
+import beerratingapp.dao.ReviewDao;
 
 
 
@@ -12,7 +12,7 @@ public class Main {
         
         File file = new File("resources/TestFile.txt");
         System.out.println("file we're passing to dao: " + file.toString());
-        BeerRatingDao brdao = new FileBeerRatingDao(file.toString());
+        ReviewDao brdao = new FileReviewDao(file.toString());
         ArrayList<Review> reviews = brdao.getAll();
         
         System.out.println("number of reviews before writing: " + reviews.size());

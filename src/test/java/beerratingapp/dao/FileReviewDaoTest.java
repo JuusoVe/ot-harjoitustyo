@@ -16,12 +16,12 @@ import beerratingapp.domain.Review;
  *
  * @author juuso
  */
-public class FileBeerRatingDaoTest {
+public class FileReviewDaoTest {
     
     @Rule
     public TemporaryFolder testFolder = new TemporaryFolder();    
   
-    BeerRatingDao dao;
+    ReviewDao dao;
     
     
     @Before
@@ -33,7 +33,7 @@ public class FileBeerRatingDaoTest {
             file.write("12345;testName;testBrew;testSty;testDate;a made up highly elitist description;6.5;40;1.055;3, 4, 5, 3;3.0\n");
         }
         
-        dao = new FileBeerRatingDao(revFile.getAbsolutePath());        
+        dao = new FileReviewDao(revFile.getAbsolutePath());        
     }
     
     @Test
