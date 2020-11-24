@@ -6,17 +6,15 @@ The application guides the user through reviewing a beer and saves the reviews. 
 - Only a basic user at first, all users will share reviews
  
 ## UI draft
-The applications has 3 views
-- List view to see all reviews or create new
-- Main view for the review
+The applications has 2 views
+- Main view showing list of review and one review (done)
 - Advanced view for smell&taste
-- Advanced view for beer details
 ![UI views!](https://github.com/JuusoVe/ot-harjoitustyo/blob/master/documentation/ui_views.jpg?raw=true)
 ## Basic Functionality
-- The application open to list view
-- Input fields for data and rating of beer characteristics
-- Possibility to open advanced views for deeper analysis of taste/smell
-- Data is saved to a SQL database and retrieved upon start up
+- The application open to list view (in progress)
+- Input fields for data and rating of beer characteristics (in progress)
+- Possibility to open advanced views for deeper analysis of taste/smell (in progress)
+- Data is saved to a file and retrieved upon start up (done)
 ## Possible advanced functionality added later
 - User role and login for private reviews
 - Search reviews

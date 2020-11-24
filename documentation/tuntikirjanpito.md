@@ -18,6 +18,8 @@
 |24.11.2020|2|small fixes to readme.md, studying scene builder
 |24.11.2020|2|creating mainview.fxml with scenebuilder
 |24.11.2020|3|trying to config the project to run with scene builder, no luck
+|24.11.2020|3|another 3 hours trying to get javafx to work
+|24.11.2020|1|got javafx working and got my fxml scene opened in the project, nothing to push for week 4 dl though
 |----------|-|------------------------------------------|
-|TOTAL|26|	|
+|TOTAL|27|	|
 
