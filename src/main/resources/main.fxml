@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.gluonhq.charm.glisten.control.CardPane?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.Button?>
@@ -18,14 +17,14 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="beerratingapp.MainSceneController">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
       <children>
             <ScrollBar layoutX="156.0" layoutY="1.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="14.0" />
             <ListView layoutY="-1.0" prefHeight="401.0" prefWidth="156.0" />
-            <Button layoutX="560.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="69.0" text="Save" />
-            <Button layoutX="560.0" layoutY="46.0" mnemonicParsing="false" text="Advanced" />
+            <Button layoutX="560.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleSave" prefHeight="25.0" prefWidth="69.0" text="Save" />
+            <Button layoutX="560.0" layoutY="46.0" mnemonicParsing="false" onAction="#handleAdvanced" text="Advanced" />
             <TextArea layoutX="182.0" layoutY="305.0" prefHeight="82.0" prefWidth="440.0" />
             <Accordion layoutX="193.0" layoutY="59.0" />
             <GridPane layoutX="182.0" layoutY="14.0" prefHeight="120.0" prefWidth="222.0">
@@ -122,11 +121,6 @@
                   </HBox>
                </children>
             </GridPane>
-            <CardPane prefHeight="401.0" prefWidth="156.0">
-                <Label style="-fx-padding:10;" text="beer1" />
-                <Label style="-fx-padding:10;" text="beer2" />
-                <Label style="-fx-padding:10;" text="beer3" />
-            </CardPane>
             <VBox layoutX="495.0" layoutY="155.0" prefHeight="120.0" prefWidth="100.0">
                <children>
                   <Label text="Total:">
@@ -142,6 +136,7 @@
                </children>
             </VBox>
             <Label layoutX="185.0" layoutY="290.0" text="Notes:" />
+            <ListView layoutY="1.0" prefHeight="392.0" prefWidth="155.0" />
       </children>
     </AnchorPane>
   </children>

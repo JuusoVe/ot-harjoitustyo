@@ -12,14 +12,36 @@
             <version>4.12</version>
             <scope>test</scope>
         </dependency>
-
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>12.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>12.0.2</version>
+        </dependency>
     </dependencies>
     <build>
     <plugins>
         <plugin>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-maven-plugin</artifactId>
+            <version>0.0.3</version>
+            <configuration>
+                <mainClass>org.openjfx.App</mainClass>
+            </configuration>
+        </plugin>
+        <plugin>
             <groupId>org.jacoco</groupId>
             <artifactId>jacoco-maven-plugin</artifactId>
             <version>0.8.3</version>
+            <configuration>
+                <excludes>
+                    <exclude>beerratingapp/ui/**/*</exclude>
+                </excludes>
+            </configuration>
             <executions>
                 <execution>
                     <id>default-prepare-agent</id>
@@ -28,6 +50,11 @@
                     </goals>
                 </execution>
             </executions>
+        </plugin>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-javadoc-plugin</artifactId>
+            <version>2.10.3</version>
         </plugin>
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
@@ -42,12 +69,32 @@
           <artifactId>maven-jxr-plugin</artifactId>
           <version>2.5</version>
         </plugin>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-shade-plugin</artifactId>
+            <version>1.6</version>
+            <executions>
+                <execution>
+                    <phase>package</phase>
+                    <goals>
+                        <goal>shade</goal>
+                    </goals>
+                    <configuration>
+                        <transformers>
+                            <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                <mainClass>beerratingapp.Main</mainClass>
+                            </transformer>
+                        </transformers>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>     
     </plugins>
     </build>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
     </properties>
     <name>BeerRatingApp</name>
 </project>

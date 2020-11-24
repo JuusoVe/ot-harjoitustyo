@@ -1,33 +1,46 @@
-package beerratingapp.domain;
+package beerratingapp;
 
-import java.io.File;
-import java.util.ArrayList;
-import beerratingapp.dao.FileReviewDao;
-import beerratingapp.dao.ReviewDao;
+import javafx.application.Application;
+import static javafx.application.Application.launch;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+import beerratingapp.domain.BeerRatingService;
 
-
-
-public class Main {
-    public static void main(String[] args) throws Exception {
+public class Main extends Application {
+    
+    private Stage stage;
+    private BeerRatingService beerRatingService;
+    private Scene mainScene;
+    
+    @Override
+    public void init() throws Exception {
         
-        File file = new File("resources/TestFile.txt");
-        System.out.println("file we're passing to dao: " + file.toString());
-        ReviewDao brdao = new FileReviewDao(file.toString());
-        ArrayList<Review> reviews = brdao.getAll();
-        
-        System.out.println("number of reviews before writing: " + reviews.size());
-        
-        Review rev = reviews.get(0);
-        System.out.println("some content from first review: " + rev.getNotes());
-        
-        int[] parts = new int[4];
-        Review newRev = new Review(666, "myBeer", "myBrewery", "myStyle", 
-                "June 6th 2020", "tastes like well fermented piss", 
-                4.8, 13, 1.046, new int[]{1, 2, 3, 4}, 2.2);
-        brdao.create(newRev);
-       
-        
-        
-
+        beerRatingService = new BeerRatingService();
+        FXMLLoader mainSceneLoader = new FXMLLoader();
+        mainSceneLoader.setLocation(getClass().getResource("/main.fxml"));
+        Parent mainPane = mainSceneLoader.load();
+        MainSceneController mainSceneController = mainSceneLoader.getController();
+        mainSceneController.setBeerRatingService(beerRatingService); 
+        mainSceneController.setApplication(this);
+        mainScene = new Scene(mainPane);
     }
+
+    @Override
+    public void start(Stage stage) throws Exception {
+        this.stage = stage;
+        stage.setTitle("BeerRatingApp");
+        setMainScene();
+        stage.show();
+    }
+    
+    public void setMainScene() {
+        stage.setScene(mainScene);
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+
 }
