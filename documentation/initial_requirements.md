@@ -6,7 +6,7 @@ The application guides the user through reviewing a beer and saves the reviews. 
 - Only a basic user at first, all users will share reviews
  
 ## UI draft
-The applications has 4 views
+The applications has 3 views
 - List view to see all reviews or create new
 - Main view for the review
 - Advanced view for smell&taste

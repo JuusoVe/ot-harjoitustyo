@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.CardPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+            <ScrollBar layoutX="156.0" layoutY="1.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="14.0" />
+            <ListView layoutY="-1.0" prefHeight="401.0" prefWidth="156.0" />
+            <Button layoutX="560.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="69.0" text="Save" />
+            <Button layoutX="560.0" layoutY="46.0" mnemonicParsing="false" text="Advanced" />
+            <TextArea layoutX="182.0" layoutY="305.0" prefHeight="82.0" prefWidth="440.0" />
+            <Accordion layoutX="193.0" layoutY="59.0" />
+            <GridPane layoutX="182.0" layoutY="14.0" prefHeight="120.0" prefWidth="222.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TextField GridPane.columnIndex="1" />
+                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label text="Beer name:" />
+                  <Label text="Brewery:" GridPane.rowIndex="1" />
+                  <Label text="Beer style:" GridPane.rowIndex="2" />
+                  <Label text="Date:" GridPane.rowIndex="3" />
+               </children>
+            </GridPane>
+            <GridPane layoutX="421.0" layoutY="14.0" prefHeight="120.0" prefWidth="120.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <TextField GridPane.columnIndex="1" />
+                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label text="ABV:" />
+                  <Label text="IBU:" GridPane.rowIndex="1" />
+                  <Label text="OG:" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+            <GridPane layoutX="185.0" layoutY="129.0" prefHeight="150.0" prefWidth="271.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="131.0" minWidth="10.0" prefWidth="126.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="145.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="30.0" minHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Appearance" GridPane.rowIndex="1" />
+                  <Label text="Smell" GridPane.rowIndex="2" />
+                  <Label text="Mouthfeel" GridPane.rowIndex="3" />
+                  <Label text="Taste" GridPane.rowIndex="4" />
+                  <Slider GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Slider GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Slider GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Slider GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                     <children>
+                        <Label text="1">
+                           <padding>
+                              <Insets left="12.0" right="12.0" />
+                           </padding>
+                        </Label>
+                        <Label text="2">
+                           <padding>
+                              <Insets left="12.0" right="12.0" />
+                           </padding>
+                        </Label>
+                        <Label text="3">
+                           <padding>
+                              <Insets left="12.0" right="12.0" />
+                           </padding>
+                        </Label>
+                        <Label text="4">
+                           <padding>
+                              <Insets left="12.0" right="12.0" />
+                           </padding>
+                        </Label>
+                        <Label text="5">
+                           <padding>
+                              <Insets left="12.0" right="12.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+            <CardPane prefHeight="401.0" prefWidth="156.0">
+                <Label style="-fx-padding:10;" text="beer1" />
+                <Label style="-fx-padding:10;" text="beer2" />
+                <Label style="-fx-padding:10;" text="beer3" />
+            </CardPane>
+            <VBox layoutX="495.0" layoutY="155.0" prefHeight="120.0" prefWidth="100.0">
+               <children>
+                  <Label text="Total:">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label text="1.23">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <Label layoutX="185.0" layoutY="290.0" text="Notes:" />
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>

@@ -15,6 +15,9 @@
 |19.11.2020|1|made unit tests to FileDAO
 |19.11.2020|1|Added checkstyle to the project, fixed a bunch of style errors
 |19.11.2020|1|made architecture.md, added architecture pic
+|24.11.2020|2|small fixes to readme.md, studying scene builder
+|24.11.2020|2|creating mainview.fxml with scenebuilder
+|24.11.2020|3|trying to config the project to run with scene builder, no luck
 |----------|-|------------------------------------------|
-|TOTAL|19|	|
+|TOTAL|26|	|
 
