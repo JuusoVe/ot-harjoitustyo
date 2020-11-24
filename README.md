@@ -10,4 +10,27 @@ It is being built as a course assignment for Helsinki University's course Ohjelm
 [architecture.md](https://github.com/JuusoVe/ot-harjoitustyo/blob/master/documentation/architecture.md) <br>
 [Tuntikirjanpito.md](https://github.com/JuusoVe/ot-harjoitustyo/blob/master/documentation/tuntikirjanpito.md) 
 
+### Testing
 
+Tests are ran with
+
+```
+mvn test
+```
+
+Test coverage report is created with
+
+```
+mvn jacoco:report
+```
+Test coverage report is found in _target/site/jacoco/index.html_
+
+
+### Checkstyle
+Style checks specified in [checkstyle.xml](https://github.com/JuusoVe/ot-harjoitustyo/blob/master/checkstyle.xml) are ran with
+
+```
+mvn jxr:jxr checkstyle:checkstyle
+```
+
+Error report is found in _target/site/checkstyle.html_

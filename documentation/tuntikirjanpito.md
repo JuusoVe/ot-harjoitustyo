@@ -14,6 +14,7 @@
 |19.11.2020|4|wrote first version of DAO and FileDAO
 |19.11.2020|1|made unit tests to FileDAO
 |19.11.2020|1|Added checkstyle to the project, fixed a bunch of style errors
+|19.11.2020|1|made architecture.md, added architecture pic
 |----------|-|------------------------------------------|
 |TOTAL|19|	|
 
