@@ -70,7 +70,24 @@ public class ReviewTest {
         int[] two = {0,2,2,0};
         rev.setPartScores(two);
         rev.updateAverage();
-        assertTrue(2.0 == rev.getAverage());  
+        assertTrue(2.0 == rev.getAverage());   
+    }
+    
+    @Test
+    public void equalsWorks() {
+        Review rev = new Review();
+        Review rev2 = new Review();
+        rev.setName("jouko");
+        rev.setId(12345);
+        rev2.setName("jouko");
+        rev2.setId(12345);
+        assertTrue(rev.equals(rev2));
+        rev2.setId(1234);
+        assertFalse(rev.equals(rev2));
+        rev2.setId(12345);
+        rev2.setName("kauha");
+        assertTrue(rev == rev);
+        assertFalse(rev.equals(rev2));
         
     }
     

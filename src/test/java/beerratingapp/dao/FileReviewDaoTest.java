@@ -19,7 +19,8 @@ import beerratingapp.domain.Review;
 public class FileReviewDaoTest {
     
     @Rule
-    public TemporaryFolder testFolder = new TemporaryFolder();    
+    public TemporaryFolder testFolder = new TemporaryFolder();
+    String file;
   
     ReviewDao dao;
     
@@ -28,7 +29,6 @@ public class FileReviewDaoTest {
     public void setUp() throws Exception {
         
         File revFile = testFolder.newFile("testfile_revs.txt");
-        
         try (FileWriter file = new FileWriter(revFile.getAbsolutePath())) {
             file.write("12345;testName;testBrew;testSty;testDate;a made up highly elitist description;6.5;40;1.055;3, 4, 5, 3;3.0\n");
         }
@@ -42,10 +42,6 @@ public class FileReviewDaoTest {
         assertEquals(1, reviewslist.size());
     }
     
-    @Test
-    public void temp() {
-        
-    }
     
     @Test
     public void reviewObjectContentFromListIsReadCorrectly() {
@@ -63,6 +59,13 @@ public class FileReviewDaoTest {
         assertTrue(4 == review.getPartScores().length);
         assertTrue(3.0 == review.getAverage());
     }
+    
+    @Test
+    public void genId() throws Exception {
+        assertEquals(2,dao.create(new Review()).getId());
+    }
+    
+
     
     
     

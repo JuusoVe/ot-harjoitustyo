@@ -1,1 +1,9 @@
-12345;testName;testBrew;testSty;testDate;this is a tasting not for testing purposes. It can have a lot of stuff in it.;6.5;40;1.055;3, 4, 5, 3;3.0
+12345;testName;testBrew;testSty;testDate;this is a tasting not for testing purposes. It can have a lot of stuff in it.;6.5;40.0;1.055;3,4,5,3;3.0
+2;bugBuggerson;myBrewery;myStyle;June 6th 2020;tastes like well fermented piss;4.8;13.0;1.046;1,2,3,4;2.2
+3;myBeer;myBrewery;myStyle;June 6th 2020;tastes like well fermented piss;4.8;13.0;1.046;1,2,3,4;2.2
+4;myBeer;myBrewery;myStyle;June 6th 2020;tastes like well fermented piss;4.8;13.0;1.046;1,2,3,4;2.2
+5;myBeer;myBrewery;myStyle;June 6th 2020;tastes like well fermented piss;4.8;13.0;1.046;1,2,3,4;2.2
+6;myBeer;myBrewery;myStyle;June 6th 2020;tastes like well fermented piss;4.8;13.0;1.046;1,2,3,4;2.2
+7;myBeer;myBrewery;myStyle;June 6th 2020;tastes like well fermented piss;4.8;13.0;1.046;1,2,3,4;2.2
+0;testcreate;null;null;null;null;0.0;0.0;0.0;3,1,1,1;1.2
+0;testcreate;null;null;null;null;0.0;0.0;0.0;3,1,1,1;1.2

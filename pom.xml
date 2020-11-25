@@ -39,7 +39,7 @@
             <version>0.8.3</version>
             <configuration>
                 <excludes>
-                    <exclude>beerratingapp/ui/**/*</exclude>
+                      <exclude>beerratingapp.MainSceneController</exclude>
                 </excludes>
             </configuration>
             <executions>

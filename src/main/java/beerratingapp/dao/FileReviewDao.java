@@ -11,12 +11,11 @@ import beerratingapp.domain.Review;
  */
 public class FileReviewDao implements ReviewDao {
     
-    public ArrayList<Review> reviewslist;
+    public ArrayList<Review> reviewsList;
     private String file;
     
     public FileReviewDao(String file) throws Exception {
-        System.out.println(file);
-        reviewslist = new ArrayList<>();
+        reviewsList = new ArrayList<>();
         this.file = file;
         try {
             Scanner reader = new Scanner(new File(file));
@@ -39,7 +38,7 @@ public class FileReviewDao implements ReviewDao {
                 }
                 double average = Double.parseDouble(parts[10]);
                 Review review = new Review(id, name, brewery, style, date, notes, abv, ibu, og, partScores, average);
-                reviewslist.add(review);
+                reviewsList.add(review);
             }
         } catch (Exception e) {
             FileWriter writer = new FileWriter(new File(file));
@@ -50,7 +49,7 @@ public class FileReviewDao implements ReviewDao {
     
     private void save() throws Exception {
         try (FileWriter writer = new FileWriter(new File(file))) {
-            for (Review review: reviewslist) {
+            for (Review review: reviewsList) {
                 writer.write(review.getId() + ";" + review.getName() + ";" + review.getBrewery() + ";" +
                     review.getStyle() + ";" + review.getDate() + ";" + review.getNotes() + ";" + review.getAbv() + ";" +
                     review.getIbu() + ";" + review.getOg() + ";" + review.getPartScores()[0] + "," + review.getPartScores()[1] +
@@ -60,21 +59,29 @@ public class FileReviewDao implements ReviewDao {
     }    
     
     private int generateId() {
-        return reviewslist.size() + 1;
+        return reviewsList.size() + 1;
     }
     
     @Override
     public ArrayList<Review> getAll() {
-        return reviewslist;
+        return reviewsList;
     }
     
     @Override
     public Review create(Review review) throws Exception {
         review.setId(generateId());
-        reviewslist.add(review);
+        reviewsList.add(review);
         save();
         return review;
     }
+
+    @Override
+    public void setReviewsList(ArrayList<Review> reviewsList) throws Exception {
+        this.reviewsList = reviewsList;
+        save();
+    }
+    
+    
     
 
     

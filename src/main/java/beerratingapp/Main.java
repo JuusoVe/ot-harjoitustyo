@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import beerratingapp.domain.BeerRatingService;
+import beerratingapp.dao.FileReviewDao;
 
 public class Main extends Application {
     
@@ -17,13 +18,18 @@ public class Main extends Application {
     @Override
     public void init() throws Exception {
         
-        beerRatingService = new BeerRatingService();
+        String reviewsFile = System.getProperty("user.dir") + "/resources/TestFile.txt";
+        beerRatingService = new BeerRatingService(new FileReviewDao(reviewsFile));
+        
         FXMLLoader mainSceneLoader = new FXMLLoader();
         mainSceneLoader.setLocation(getClass().getResource("/main.fxml"));
         Parent mainPane = mainSceneLoader.load();
         MainSceneController mainSceneController = mainSceneLoader.getController();
         mainSceneController.setBeerRatingService(beerRatingService); 
         mainSceneController.setApplication(this);
+        mainSceneController.setReviewOnInit();
+        mainSceneController.updateReviewsListView();
+
         mainScene = new Scene(mainPane);
     }
 

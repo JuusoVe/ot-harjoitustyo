@@ -9,4 +9,6 @@ public interface ReviewDao {
     
     ArrayList<Review> getAll();
     
+    void setReviewsList(ArrayList<Review> reviewsList) throws Exception;
+    
 }
