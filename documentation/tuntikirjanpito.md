@@ -23,6 +23,8 @@
 |25.11.2020|3|load reviews from file to ui list on start up
 |25.11.2020|2|create new review, slider and average updates
 |25.11.2020|2|save to file, update displayed review when clicked on list
+|25.11.2020|1|some more config work to get the stand alone .jar to work
+|25.11.2020|1|updating architecture with new sequence
 |----------|-|------------------------------------------|
-|TOTAL|27|	|
+|TOTAL|40|	|
 

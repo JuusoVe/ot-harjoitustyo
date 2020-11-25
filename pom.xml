@@ -38,9 +38,6 @@
             <artifactId>jacoco-maven-plugin</artifactId>
             <version>0.8.3</version>
             <configuration>
-                <excludes>
-                      <exclude>beerratingapp.MainSceneController</exclude>
-                </excludes>
             </configuration>
             <executions>
                 <execution>
@@ -82,7 +79,7 @@
                     <configuration>
                         <transformers>
                             <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                <mainClass>beerratingapp.Main</mainClass>
+                                <mainClass>beerratingapp.Starter</mainClass>
                             </transformer>
                         </transformers>
                     </configuration>

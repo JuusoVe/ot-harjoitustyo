@@ -18,7 +18,7 @@ public class Main extends Application {
     @Override
     public void init() throws Exception {
         
-        String reviewsFile = System.getProperty("user.dir") + "/resources/TestFile.txt";
+        String reviewsFile = "reviews.txt";
         beerRatingService = new BeerRatingService(new FileReviewDao(reviewsFile));
         
         FXMLLoader mainSceneLoader = new FXMLLoader();
