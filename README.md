@@ -34,3 +34,8 @@ mvn jxr:jxr checkstyle:checkstyle
 ```
 
 Error report is found in _target/site/checkstyle.html_
+
+
+### Releases
+
+[Week 5 release](https://github.com/JuusoVe/ot-harjoitustyo/blob/master/documentation/tuntikirjanpito.md) 
