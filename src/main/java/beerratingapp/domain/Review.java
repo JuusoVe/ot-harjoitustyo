@@ -7,7 +7,7 @@ import java.util.Random;
 
 public class Review {
     
-    private int id;
+    private int advancedId;
     private String name;
     private String brewery;
     private String style;
@@ -20,8 +20,8 @@ public class Review {
     private final int[] weights = {1, 3, 5, 1};
     private double average;
 
-    public Review(int id, String name, String brewery, String style, String date, String notes, double abv, double ibu, double og, int[] partScores, double average) {
-        this.id = id;
+    public Review(String name, String brewery, String style, String date, String notes, double abv, double ibu, double og, int[] partScores, double average) {
+        this.advancedId = -1;
         this.name = name;
         this.brewery = brewery;
         this.style = style;
@@ -32,11 +32,6 @@ public class Review {
         this.og = og;
         this.partScores = partScores;
         this.average = average;
-    }
-    
-    public Review(int id, int[] partScores) {
-        this.id = id;
-        this.partScores = new int[4];
     }
     
     public Review() {
@@ -65,10 +60,6 @@ public class Review {
             }
         }
         this.partScores = partScores;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
     
     public void setName(String name) {
@@ -111,10 +102,6 @@ public class Review {
         return average;
     }
 
-    public int getId() {
-        return id;
-    }
-
     public String getName() {
         return name;
     }
@@ -147,7 +134,6 @@ public class Review {
         return og;
     }
 
-
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -160,14 +146,14 @@ public class Review {
             return false;
         }
         final Review other = (Review) obj;
-        if (this.id != other.id) {
-            return false;
-        }
         if (!Objects.equals(this.name, other.name)) {
             return false;
         }
         return true;
     }
+
+
+
     
     
     

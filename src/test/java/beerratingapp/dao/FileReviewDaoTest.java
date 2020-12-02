@@ -47,7 +47,6 @@ public class FileReviewDaoTest {
     public void reviewObjectContentFromListIsReadCorrectly() {
         ArrayList<Review> reviewslist = dao.getAll();
         Review review = reviewslist.get(0);
-        assertEquals(12345, review.getId());
         assertEquals("testName", review.getName());
         assertEquals("testBrew", review.getBrewery());
         assertEquals("testSty", review.getStyle());
@@ -58,11 +57,6 @@ public class FileReviewDaoTest {
         assertTrue(1.055 == review.getOg());
         assertTrue(4 == review.getPartScores().length);
         assertTrue(3.0 == review.getAverage());
-    }
-    
-    @Test
-    public void genId() throws Exception {
-        assertEquals(2,dao.create(new Review()).getId());
     }
     
 

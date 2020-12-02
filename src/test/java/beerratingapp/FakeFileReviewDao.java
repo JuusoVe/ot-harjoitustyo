@@ -1,5 +1,6 @@
-package beerratingapp.dao;
+package beerratingapp;
 
+import beerratingapp.dao.*;
 import java.io.File;
 import java.io.FileWriter;
 import java.util.ArrayList;
@@ -9,12 +10,12 @@ import beerratingapp.domain.Review;
  *
  * @author juuso
  */
-public class FileReviewDao implements ReviewDao {
+public class FakeFileReviewDao implements ReviewDao {
     
     public ArrayList<Review> reviewsList;
     private String file;
     
-    public FileReviewDao(String file) throws Exception {
+    public FakeFileReviewDao(String file) throws Exception {
         reviewsList = new ArrayList<>();
         this.file = file;
         try {

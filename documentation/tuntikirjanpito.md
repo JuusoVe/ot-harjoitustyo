@@ -25,6 +25,9 @@
 |25.11.2020|2|save to file, update displayed review when clicked on list
 |25.11.2020|1|some more config work to get the stand alone .jar to work
 |25.11.2020|1|updating architecture with new sequence
+|02.12.2020|1|bug fixes in main controller and Reviews
+|02.12.2020|3|refactored list and review to be separate fxml and controllers
+|02.12.2020|6|implemented first version of advanced from dao to ui
 |----------|-|------------------------------------------|
-|TOTAL|40|	|
+|TOTAL|50|	|
 

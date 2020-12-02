@@ -78,13 +78,8 @@ public class ReviewTest {
         Review rev = new Review();
         Review rev2 = new Review();
         rev.setName("jouko");
-        rev.setId(12345);
         rev2.setName("jouko");
-        rev2.setId(12345);
         assertTrue(rev.equals(rev2));
-        rev2.setId(1234);
-        assertFalse(rev.equals(rev2));
-        rev2.setId(12345);
         rev2.setName("kauha");
         assertTrue(rev == rev);
         assertFalse(rev.equals(rev2));
