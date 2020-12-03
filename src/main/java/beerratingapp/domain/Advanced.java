@@ -53,6 +53,18 @@ public class Advanced {
     public String getReviewName() {
         return reviewName;
     }
+
+    public void setHopScores(int[] hopScores) {
+        this.hopScores = hopScores;
+    }
+
+    public void setMaltScores(int[] maltScores) {
+        this.maltScores = maltScores;
+    }
+
+    public void setNotes(String notes) {
+        this.notes = notes;
+    }
     
     
     

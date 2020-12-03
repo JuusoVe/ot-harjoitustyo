@@ -5,10 +5,8 @@ import beerratingapp.domain.Review;
 
 public interface ReviewDao {
     
-    Review create(Review review) throws Exception;
-    
     ArrayList<Review> getAll();
     
-    void setReviewsList(ArrayList<Review> reviewsList) throws Exception;
+    void saveReviewsList(ArrayList<Review> reviewsList) throws Exception;
     
 }

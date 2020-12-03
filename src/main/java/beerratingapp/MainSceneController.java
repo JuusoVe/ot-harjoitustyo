@@ -30,6 +30,8 @@ public class MainSceneController implements Initializable {
     private ArrayList<Review> reviewsList;
     private List<String> reviewsListNames;
     private ListProperty<String> listProperty = new SimpleListProperty<>();
+    private String displayedView;
+    
 
     
     @FXML
@@ -40,6 +42,10 @@ public class MainSceneController implements Initializable {
     
     @FXML
     private void handleListViewClick(MouseEvent clicked) {
+        if (displayedView.equals("advanced")) {
+            setReviewsView();
+        }
+        
         int reviewToSet = reviewsListView.getSelectionModel().getSelectedIndex();
         if (reviewToSet == -1) {
             return;
@@ -49,8 +55,7 @@ public class MainSceneController implements Initializable {
     
     @FXML
     private void handleCreateButton(ActionEvent event) {
-        Review review = new Review();
-        reviewController.setCurrentReview(review);
+        reviewController.setCurrentReview(new Review());
     }
     
     public void saveReviewsList() {
@@ -72,8 +77,17 @@ public class MainSceneController implements Initializable {
         
     }
     
+    public void saveAdvanced(Advanced advanced) {
+        beerRatingService.saveAdvanced(advanced);
+    }
+    
     public void backFromAdvanced(String beerName) {
-        
+        setReviewsView();
+        for (Review review : reviewsList) {
+            if (review.getName().equals(beerName)) {
+                reviewController.setCurrentReview(review);
+            }
+        }    
     }
     
     public void setReviewOnInit() {
@@ -83,7 +97,8 @@ public class MainSceneController implements Initializable {
             reviewController.setCurrentReview(reviewsList.get(0));
         } else {
             reviewController.setCurrentReview(new Review());
-        } 
+        }
+        updateReviewsListView();
     }
     
     private void setReviewsView() {
@@ -101,25 +116,26 @@ public class MainSceneController implements Initializable {
         mainPane.setCenter(loadViewFromFile("advanced"));
     }
     
-    private Pane loadViewFromFile (String viewType){
+    private Pane loadViewFromFile(String viewType) {
         FXMLLoader sceneLoader = new FXMLLoader();
         sceneLoader.setLocation(getClass().getResource("/" + viewType + ".fxml"));
         Pane pane = new Pane();
         try {
             pane = sceneLoader.load();
-            } catch (Exception e) {
-                System.out.println("Failed to load " + viewType + ".fxml Error message: ");
-                System.out.println(e.toString());
-            }
+        } catch (Exception e) {
+            System.out.println("Failed to load " + viewType + ".fxml Error message: ");
+            System.out.println(e.toString());
+        }
         if (viewType.equals("review")) {
             reviewController = sceneLoader.getController();
             reviewController.setMainSceneController(this);
+            displayedView = viewType;
         }
-        if (viewType == "advanced") {
+        if (viewType.equals("advanced")) {
             advancedController = sceneLoader.getController();
             advancedController.setMainSceneController(this);
+            displayedView = viewType;
         }
-
         return pane;
     }
     

@@ -154,7 +154,7 @@
             <Slider fx:id="grassySlider" blockIncrement="1.0" cache="true" majorTickUnit="1.0" max="5.0" min="1.0" minorTickCount="0" snapToTicks="true" value="1.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
             <Slider fx:id="earthyhSlider" blockIncrement="1.0" cache="true" majorTickUnit="1.0" max="5.0" min="1.0" minorTickCount="0" snapToTicks="true" value="1.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
             <Slider fx:id="pineySlider" blockIncrement="1.0" cache="true" majorTickUnit="1.0" max="5.0" min="1.0" minorTickCount="0" snapToTicks="true" value="1.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-            <Slider fx:id="spiceySlider" blockIncrement="1.0" cache="true" majorTickUnit="1.0" max="5.0" min="1.0" minorTickCount="0" snapToTicks="true" value="1.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <Slider fx:id="spicySlider" blockIncrement="1.0" cache="true" majorTickUnit="1.0" max="5.0" min="1.0" minorTickCount="0" snapToTicks="true" value="1.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
             <Slider fx:id="caramelSlider" blockIncrement="1.0" cache="true" majorTickUnit="1.0" max="5.0" min="1.0" minorTickCount="0" snapToTicks="true" value="1.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
             <Slider fx:id="biscuitSlider" blockIncrement="1.0" cache="true" majorTickUnit="1.0" max="5.0" min="1.0" minorTickCount="0" snapToTicks="true" value="1.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
             <Slider fx:id="earthytSlider" blockIncrement="1.0" cache="true" majorTickUnit="1.0" max="5.0" min="1.0" minorTickCount="0" snapToTicks="true" value="1.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
@@ -166,5 +166,6 @@
          </children>
       </GridPane>
       <Label fx:id="beerNameLabel" layoutX="221.0" layoutY="18.0" text="beerName" />
+      <Button fx:id="saveButton" layoutX="365.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleSaveButton" prefHeight="25.0" prefWidth="69.0" text="Save" />
 </children>
 </AnchorPane>

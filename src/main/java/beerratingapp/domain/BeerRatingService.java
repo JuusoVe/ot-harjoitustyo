@@ -16,23 +16,22 @@ public class BeerRatingService {
         this.advancedDao = advancedDao;
     }
     
-    public boolean createReview(String content) {
-        Review review = new Review();
+    public boolean saveReviewsList(ArrayList<Review> reviewsList) {
         try {   
-            reviewDao.create(review);
+            reviewDao.saveReviewsList(reviewsList);
         } catch (Exception ex) {
             return false;
         }
         return true;
     }
     
-    public boolean saveReviewsList(ArrayList<Review> reviewsList) {
-        try {   
-            reviewDao.setReviewsList(reviewsList);
-        } catch (Exception ex) {
-            return false;
+    public void saveAdvanced(Advanced advanced) {
+        try {
+            advancedDao.saveAdvanced(advanced);
+        } catch (Exception e) {
+            System.out.println("BeerRatingService failed to saveAdvanced. Error:");
+            System.out.println(e.toString());
         }
-        return true;
     }
     
     public ArrayList<Review> getAll() {

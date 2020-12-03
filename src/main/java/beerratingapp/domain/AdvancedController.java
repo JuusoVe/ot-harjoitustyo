@@ -75,9 +75,14 @@ public class AdvancedController implements Initializable {
     
     @FXML
     private void handleBackButton(ActionEvent event) {
-        mainSceneController.backFromAdvanced(currentAdvanced.getReviewName());
-        
+        mainSceneController.backFromAdvanced(currentAdvanced.getReviewName());    
     }
+    
+    @FXML
+    private void handleSaveButton(ActionEvent event) {
+        getValuesFromUi();
+        mainSceneController.saveAdvanced(currentAdvanced);
+    }    
     
     public void setMainSceneController(MainSceneController mainSceneController) {
         this.mainSceneController = mainSceneController;
@@ -87,22 +92,23 @@ public class AdvancedController implements Initializable {
         return currentAdvanced;
     }
 
-//    public Review getValuesFromUi(Review review) {
-//        Review toAdd = review;
-//        toAdd.setName(beerNameField.getText());
-//        toAdd.setBrewery(breweryField.getText());
-//        toAdd.setStyle(beerStyleField.getText());
-//        toAdd.setDate(dateField.getText());
-//        toAdd.setAbv(Double.valueOf(abvField.getText()));
-//        toAdd.setIbu(Double.valueOf(ibuField.getText()));
-//        toAdd.setOg(Double.valueOf(ogField.getText()));
-//        int[] partScores = new int[] {(int) appearanceSlider.getValue(), (int) smellSlider.getValue(), 
-//            (int) tasteSlider.getValue(), (int) mouthFeelSlider.getValue()};
-//        toAdd.setPartScores(partScores);
-//        toAdd.updateAverage();
-//        toAdd.setNotes(notesArea.getText());
-//        return review;
-//    }
+    public Advanced getValuesFromUi() {
+        Advanced advanced = currentAdvanced;
+        
+        int[] hopScores = new int[] {(int) floralSlider.getValue(), (int) fruitySlider.getValue(), 
+            (int) citrusSlider.getValue(), (int) herbalSlider.getValue(), (int) grassySlider.getValue(),
+            (int) earthyhSlider.getValue(), (int) pineySlider.getValue(), (int) spicySlider.getValue()};
+        advanced.setHopScores(hopScores);
+        
+        int[] maltScores = new int[] {(int) caramelSlider.getValue(), (int) biscuitSlider.getValue(), 
+            (int) earthytSlider.getValue(), (int) nuttySlider.getValue(), (int) chocolateSlider.getValue(),
+            (int) coffeeSlider.getValue(), (int) roastSlider.getValue(), (int) tartSlider.getValue()};
+        advanced.setMaltScores(maltScores);
+        
+        advanced.setNotes(notesArea.getText());
+        
+        return advanced;
+    }
     
     public void setCurrentAdvanced(Advanced advanced) {
         currentAdvanced = advanced;

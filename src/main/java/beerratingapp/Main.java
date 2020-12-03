@@ -31,7 +31,6 @@ public class Main extends Application {
         mainSceneController.setBeerRatingService(beerRatingService); 
         mainSceneController.setApplication(this);
         mainSceneController.setReviewOnInit();
-        mainSceneController.updateReviewsListView();
 
         mainScene = new Scene(mainPane);
     }

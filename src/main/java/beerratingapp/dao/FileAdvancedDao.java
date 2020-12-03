@@ -49,11 +49,11 @@ public class FileAdvancedDao implements AdvancedDao {
     private void save() throws Exception {
         try (FileWriter writer = new FileWriter(new File(file))) {
             for (Advanced advanced: advancedList) {
-                writer.write(advanced.getId() + ";" + advanced.getReviewName() + ";" + advanced.getHopScores()[0] + ";" + advanced.getHopScores()[1] 
-                         + ";" + advanced.getHopScores()[2]  + ";" + advanced.getHopScores()[3]  + ";" + advanced.getHopScores()[4]  + ";" + advanced.getHopScores()[5] 
-                         + ";" + advanced.getHopScores()[6]  + ";" + advanced.getHopScores()[7]  + ";" + advanced.getMaltScores()[0]  + ";" + advanced.getMaltScores()[1] 
-                         + ";" + advanced.getMaltScores()[2]  + ";" + advanced.getMaltScores()[3]  + ";" + advanced.getMaltScores()[4]  + ";" + advanced.getMaltScores()[5] 
-                         + ";" + advanced.getMaltScores()[6]  + ";" + advanced.getMaltScores()[7]  + ";" + advanced.getNotes() + "\n");
+                writer.write(advanced.getId() + ";" + advanced.getReviewName() + ";" + advanced.getHopScores()[0] + "," + advanced.getHopScores()[1] 
+                         + "," + advanced.getHopScores()[2]  + "," + advanced.getHopScores()[3]  + "," + advanced.getHopScores()[4]  + "," + advanced.getHopScores()[5] 
+                         + "," + advanced.getHopScores()[6]  + "," + advanced.getHopScores()[7]  + ";" + advanced.getMaltScores()[0]  + "," + advanced.getMaltScores()[1] 
+                         + "," + advanced.getMaltScores()[2]  + "," + advanced.getMaltScores()[3]  + "," + advanced.getMaltScores()[4]  + "," + advanced.getMaltScores()[5] 
+                         + "," + advanced.getMaltScores()[6]  + "," + advanced.getMaltScores()[7]  + "," + advanced.getNotes() + "\n");
             }
         }
     }    
@@ -70,17 +70,21 @@ public class FileAdvancedDao implements AdvancedDao {
     }
     
     @Override
-    public Advanced create(Advanced advanced) throws Exception {
-        advancedList.add(advanced);
+    public Advanced saveAdvanced(Advanced advanced) throws Exception {
+        boolean asNew = true;
+        for (int i = 0; i < advancedList.size(); i++) {
+            if (advancedList.get(i).getId() == advanced.getId()) {
+                advancedList.set(i, advanced);
+                asNew = false;
+            }
+        }
+        if (asNew) {
+            advancedList.add(advanced);
+        }
         save();
         return advanced;
     }
 
-    @Override
-    public void setAdvancedList(ArrayList<Advanced> advancedList) throws Exception {
-        this.advancedList = advancedList;
-        save();
-    }
     
     
     

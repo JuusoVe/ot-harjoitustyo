@@ -30,7 +30,7 @@ public class FileReviewDaoTest {
         
         File revFile = testFolder.newFile("testfile_revs.txt");
         try (FileWriter file = new FileWriter(revFile.getAbsolutePath())) {
-            file.write("12345;testName;testBrew;testSty;testDate;a made up highly elitist description;6.5;40;1.055;3, 4, 5, 3;3.0\n");
+            file.write("testName;testBrew;testSty;testDate;a made up highly elitist description;6.5;40;1.055;3, 4, 5, 3;3.0\n");
         }
         
         dao = new FileReviewDao(revFile.getAbsolutePath());        
@@ -58,22 +58,5 @@ public class FileReviewDaoTest {
         assertTrue(4 == review.getPartScores().length);
         assertTrue(3.0 == review.getAverage());
     }
-    
 
-    
-    
-    
-    
-    
-    
-//    @After
-//    public void tearDown() {
-//        revFile.delete();
-//    }
-
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
 }

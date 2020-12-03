@@ -21,22 +21,21 @@ public class FileReviewDao implements ReviewDao {
             Scanner reader = new Scanner(new File(file));
             while (reader.hasNextLine()) {
                 String[] parts = reader.nextLine().split(";");
-                int id = Integer.parseInt(parts[0]);
-                String name = parts[1];
-                String brewery = parts[2];
-                String style = parts[3];
-                String date = parts[4];
-                String notes = parts[5];   
-                double abv = Double.parseDouble(parts[6]);
-                double ibu = Double.parseDouble(parts[7]);
-                double og = Double.parseDouble(parts[8]);
+                String name = parts[0];
+                String brewery = parts[1];
+                String style = parts[2];
+                String date = parts[3];
+                String notes = parts[4];   
+                double abv = Double.parseDouble(parts[5]);
+                double ibu = Double.parseDouble(parts[6]);
+                double og = Double.parseDouble(parts[7]);
                 int[] partScores = new int[4];
-                String[] partialParts = parts[9].split(",");
+                String[] partialParts = parts[8].split(",");
                 for (int i = 0; i < partialParts.length; i++) {
                     partialParts[i] = partialParts[i].trim(); 
                     partScores[i] = Integer.parseInt(partialParts[i]);
                 }
-                double average = Double.parseDouble(parts[10]);
+                double average = Double.parseDouble(parts[9]);
                 Review review = new Review(name, brewery, style, date, notes, abv, ibu, og, partScores, average);
                 reviewsList.add(review);
             }
@@ -64,15 +63,9 @@ public class FileReviewDao implements ReviewDao {
         return reviewsList;
     }
     
-    @Override
-    public Review create(Review review) throws Exception {
-        reviewsList.add(review);
-        save();
-        return review;
-    }
 
     @Override
-    public void setReviewsList(ArrayList<Review> reviewsList) throws Exception {
+    public void saveReviewsList(ArrayList<Review> reviewsList) throws Exception {
         this.reviewsList = reviewsList;
         save();
     }
