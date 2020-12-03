@@ -7,9 +7,9 @@ The program
 
 The UI consists of three views:
 
--The parent view contains a list of all reviews. 
--The Review-view displays the base view for a review
--The Advanced-view contains additional advanced options for a review
+- The parent view contains a list of all reviews. 
+- The Review-view displays the base view for a review
+- The Advanced-view contains additional advanced options for a review
 
 The UI consists of a FXML-architecture, meaning each view has a FXML-file to define the visible UI and a controller to set their initial data and handle user inputs. 
 The Review-view and Advanced-view are childred of the main scene. The list view is always visible and interactable. The Review-view and Advanced-view only handle one Review- 
