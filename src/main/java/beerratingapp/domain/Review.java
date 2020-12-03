@@ -16,10 +16,12 @@ public class Review {
     private double abv;
     private double ibu;
     private double og; 
-    private int[] partScores; //0 appearance, 1 smell, 2 taste, 3 mouthfeel
+    private int[] partScores; 
     private final int[] weights = {1, 3, 5, 1};
     private double average;
 
+    
+    
     public Review(String name, String brewery, String style, String date, String notes, double abv, double ibu, double og, int[] partScores, double average) {
         this.advancedId = -1;
         this.name = name;
@@ -38,6 +40,11 @@ public class Review {
         this.partScores = new int[4];
     }
     
+ /**
+ * Updates the Weighted average score of this Review Object
+ * 
+ */
+    
     public void updateAverage() { //update the weighted average of partScores
         int sum = 0;
         int weiSum = 0;
@@ -49,7 +56,12 @@ public class Review {
         }
         this.average = 1.0 * sum / weiSum;   
     }
-
+ /**
+ * Sets the partial scores of this Review Object and validates the values to be between 1-5.
+ * @param partScores int[] of length 4 with partial scores in order:
+ * 0 appearance, 1 smell, 2 taste, 3 mouthfeel
+ */
+    
     public void setPartScores(int[] partScores) { //force minimums and maximums before setting
         for (int i = 0; i < partScores.length; i++) {
             if (partScores[i] < 0) {

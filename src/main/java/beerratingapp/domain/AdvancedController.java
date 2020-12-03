@@ -91,7 +91,12 @@ public class AdvancedController implements Initializable {
     public Advanced getCurrentAdvanced() {
         return currentAdvanced;
     }
-
+/**
+ * Updates the currentAdvanced Object of this controller with the values from the UI 
+ * and returns the updated currentAdvanced as an Advanced Object.
+ * 
+ *@return currentAdvanced updated with values from the UI
+ */
     public Advanced getValuesFromUi() {
         Advanced advanced = currentAdvanced;
         
@@ -109,6 +114,12 @@ public class AdvancedController implements Initializable {
         
         return advanced;
     }
+    
+ /**
+ * Sets the values in the UI according to the Advanced Object receved as param
+ * 
+ *@param Advanced Object the values of which are set to the UI
+ */
     
     public void setCurrentAdvanced(Advanced advanced) {
         currentAdvanced = advanced;

@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-
 <BorderPane fx:id="mainPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="beerratingapp.MainSceneController">
    <center>
       <HBox>
@@ -18,7 +17,7 @@
    <left>
       <VBox BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="createButton" mnemonicParsing="false" onAction="#handleCreateButton" prefHeight="30.0" prefWidth="155.0" text="Create a new recipe" />
+            <Button fx:id="createButton" mnemonicParsing="false" onAction="#handleCreateButton" prefHeight="30.0" prefWidth="155.0" text="Create a new review" />
             <ListView fx:id="reviewsListView" onMouseClicked="#handleListViewClick" prefHeight="360.0" prefWidth="155.0" />
          </children>
       </VBox>

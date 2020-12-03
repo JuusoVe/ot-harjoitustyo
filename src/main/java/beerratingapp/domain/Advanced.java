@@ -17,6 +17,14 @@ public class Advanced {
     String notes;
     String reviewName;
 
+/**
+ * Creates an advanced object to represent the additional data
+ * attached to a Review Object
+ * 
+ *
+ * @param   reviewName   Name of the Review Object 
+ */
+    
     public Advanced(String reviewName) {
         
         this.reviewName = reviewName;

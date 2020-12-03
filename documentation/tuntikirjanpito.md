@@ -29,8 +29,8 @@
 |02.12.2020|3|refactored list and review to be separate fxml and controllers
 |02.12.2020|6|implemented first version of advanced from dao to ui
 |03.12.2020|3|finished all ui interactions for advanced
-|03.12.2020|1|created FileAdvancedDao tests
-|03.12.2020|1|configuring testFX to test fxml controller classes
+|03.12.2020|1|created FileAdvancedDao tests and Advanced tests
+|03.12.2020|3|updated architecture, started javadoc, started user instructions
 |----------|-|------------------------------------------|
-|TOTAL|54|	|
+|TOTAL|57|	|
 

@@ -30,7 +30,6 @@ reviews.txt contains the list of all reviews
 advanced.txt contains the advanced information for each review to which one has been created and saved
 
 ## Main functionality
-The following sequences describe the main functionality:
 Initializing the application:
 ![init_sequence!](https://github.com/JuusoVe/ot-harjoitustyo/blob/master/documentation/init_sequence.jpg?raw=true)
 
