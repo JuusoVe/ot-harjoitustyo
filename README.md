@@ -38,4 +38,5 @@ Error report is found in _target/site/checkstyle.html_
 
 ### Releases
 
-[Week 5 release](https://github.com/JuusoVe/ot-harjoitustyo/blob/master/documentation/tuntikirjanpito.md) 
+[Week 5 release](https://github.com/JuusoVe/ot-harjoitustyo/releases/tag/week5) <br>
+[Week 6 release](https://github.com/JuusoVe/ot-harjoitustyo/releases/tag/week6)
