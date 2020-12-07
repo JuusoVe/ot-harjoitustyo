@@ -4,6 +4,7 @@ import beerratingapp.dao.FileReviewDao;
 import beerratingapp.dao.ReviewDao;
 import beerratingapp.dao.AdvancedDao;
 import beerratingapp.dao.FileAdvancedDao;
+import beerratingapp.ui.MainSceneController;
 
 
 public class BeerRatingService {

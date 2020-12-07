@@ -1,5 +1,6 @@
-package beerratingapp;
+package beerratingapp.ui;
 
+import beerratingapp.Main;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -14,8 +15,6 @@ import javafx.scene.input.MouseEvent;
 import java.util.*;
 import beerratingapp.domain.BeerRatingService;
 import beerratingapp.domain.Review;
-import beerratingapp.domain.ReviewController;
-import beerratingapp.domain.AdvancedController;
 import beerratingapp.domain.Advanced;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXMLLoader;
@@ -129,13 +128,12 @@ public class MainSceneController implements Initializable {
         if (viewType.equals("review")) {
             reviewController = sceneLoader.getController();
             reviewController.setMainSceneController(this);
-            displayedView = viewType;
         }
         if (viewType.equals("advanced")) {
             advancedController = sceneLoader.getController();
             advancedController.setMainSceneController(this);
-            displayedView = viewType;
         }
+        displayedView = viewType;
         return pane;
     }
     

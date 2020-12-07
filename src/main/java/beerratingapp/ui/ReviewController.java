@@ -1,5 +1,6 @@
-package beerratingapp.domain;
+package beerratingapp.ui;
 
+import beerratingapp.domain.Review;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -11,7 +12,7 @@ import javafx.scene.control.Slider;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.Label;
 
-import beerratingapp.MainSceneController;
+import beerratingapp.ui.MainSceneController;
 
 public class ReviewController implements Initializable {
     

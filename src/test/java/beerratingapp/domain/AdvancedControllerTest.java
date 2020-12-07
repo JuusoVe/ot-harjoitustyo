@@ -5,6 +5,7 @@
  */
 package beerratingapp.domain;
 
+import beerratingapp.ui.AdvancedController;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;

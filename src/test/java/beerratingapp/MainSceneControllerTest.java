@@ -1,12 +1,13 @@
 package beerratingapp;
 
 
+import beerratingapp.ui.MainSceneController;
 import beerratingapp.dao.FileAdvancedDao;
 import beerratingapp.dao.FileReviewDao;
 import org.junit.Test;
 import org.junit.Assert;
 import java.util.*;
-import beerratingapp.domain.ReviewController;
+import beerratingapp.ui.ReviewController;
 import beerratingapp.domain.BeerRatingService;
 import beerratingapp.domain.Review;
 import org.testfx.api.FxAssert;

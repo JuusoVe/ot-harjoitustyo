@@ -1,5 +1,6 @@
 package beerratingapp;
 
+import beerratingapp.ui.MainSceneController;
 import javafx.application.Application;
 import static javafx.application.Application.launch;
 import javafx.fxml.FXMLLoader;
@@ -38,7 +39,7 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         this.stage = stage;
-        stage.setTitle("BeerRatingApp");
+        stage.setTitle("BeerRating");
         setMainScene();
         stage.show();
     }
