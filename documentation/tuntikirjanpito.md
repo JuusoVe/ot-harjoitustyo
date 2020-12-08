@@ -35,7 +35,7 @@
 |07.12.2020|1|implemented better id system and review-advanced matching
 |08.12.2020|1|bug fixes
 |08.12.2020|2|created form validators for double fields, new release
-|08.12.2020|1|documentation updates
+|08.12.2020|2|documentation updates
 |----------|-|------------------------------------------|
-|TOTAL|63|	|
+|TOTAL|64|	|
 
