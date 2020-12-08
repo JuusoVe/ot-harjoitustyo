@@ -31,10 +31,11 @@
 |03.12.2020|3|finished all ui interactions for advanced
 |03.12.2020|1|created FileAdvancedDao tests and Advanced tests
 |03.12.2020|3|updated architecture, started javadoc, started user instructions
-|07.12.2020|x|refactored ui to its own package, created fxml-dao, updated documentation accordingly
-|07.12.2020|x|implemented better id system and review-advanced matching
-|07.12.2020|x|bug fixes
-|07.12.2020|x|created form validators for double fields
+|07.12.2020|2|refactored ui to its own package, created fxml-dao, updated documentation accordingly
+|07.12.2020|1|implemented better id system and review-advanced matching
+|08.12.2020|1|bug fixes
+|08.12.2020|2|created form validators for double fields, new release
+|08.12.2020|1|documentation updates
 |----------|-|------------------------------------------|
-|TOTAL|57|	|
+|TOTAL|63|	|
 

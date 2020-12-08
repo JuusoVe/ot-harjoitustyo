@@ -84,11 +84,17 @@ public class AdvancedController implements Initializable {
         getValuesFromUi();
         mainSceneController.saveAdvanced(currentAdvanced);
     }    
-    
+/**
+ * sets the the parent mainSceneController for this AdvancedController
+ */    
     public void setMainSceneController(MainSceneController mainSceneController) {
         this.mainSceneController = mainSceneController;
     }
-
+/**
+ * returns the current advanced Object
+ * 
+ * @return the currently displayed Advanced object
+ */
     public Advanced getCurrentAdvanced() {
         return currentAdvanced;
     }
@@ -117,9 +123,9 @@ public class AdvancedController implements Initializable {
     }
     
  /**
- * Sets the values in the UI according to the Advanced Object receved as param
+ * Sets the values in the UI according to the Advanced Object
  * 
- *@param Advanced Object the values of which are set to the UI
+ *@param advanced Advanced Object the values of which are set to the UI
  */
     
     public void setCurrentAdvanced(Advanced advanced) {

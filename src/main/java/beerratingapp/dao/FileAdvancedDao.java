@@ -7,7 +7,7 @@ import java.util.Scanner;
 import beerratingapp.domain.Advanced;
 /**
  *
- * @author juuso
+ * DAO class for reading from and writing to the file storing Advanced classes info permanently
  */
 public class FileAdvancedDao implements AdvancedDao {
     

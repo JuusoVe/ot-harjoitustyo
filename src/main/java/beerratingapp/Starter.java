@@ -1,13 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package beerratingapp;
 
 /**
  *
- * @author juuso
+ * This is an extra main calling the actual main method to work around JavaFX-issues with .jar files
  */
 public class Starter {
     

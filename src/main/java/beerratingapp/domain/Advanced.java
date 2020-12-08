@@ -3,7 +3,7 @@ package beerratingapp.domain;
 
 /**
  *
- * @author juuso
+ * Object Class representing the Advanced data. Always attached to a Review by reviewId
  */
 public class Advanced {
     
@@ -17,7 +17,6 @@ public class Advanced {
  * Creates an advanced object to represent the additional data
  * attached to a Review Object
  * 
- *
  * @param   reviewId   id of the Review object attached to this Advanced object 
  */
     

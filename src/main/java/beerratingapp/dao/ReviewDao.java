@@ -1,3 +1,9 @@
+ /**
+ * Abstract DAO class for the Review class
+ * 
+ *
+ */
+
 package beerratingapp.dao;
 
 import java.util.ArrayList;

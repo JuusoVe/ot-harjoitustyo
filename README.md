@@ -18,7 +18,7 @@ Tests are ran with
 mvn test
 ```
 
-Test coverage report is created with
+Test coverage report is generated with
 
 ```
 mvn jacoco:report
@@ -34,6 +34,14 @@ mvn jxr:jxr checkstyle:checkstyle
 ```
 
 Error report is found in _target/site/checkstyle.html_
+
+### Javadoc
+
+JavaDoc is generated with
+
+```
+mvn javadoc:javadoc
+```
 
 
 ### Releases

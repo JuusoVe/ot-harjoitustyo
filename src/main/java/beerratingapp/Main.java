@@ -11,12 +11,22 @@ import javafx.stage.Stage;
 import beerratingapp.domain.BeerRatingService;
 import beerratingapp.dao.*;
 
+ /**
+ * The actual main class, called by Starter.java to work around JavaFX and .jar issues
+ * 
+ */
+
 public class Main extends Application {
     
     private Stage stage;
     private BeerRatingService beerRatingService;
     private Scene mainScene;
     
+    
+ /**
+ * Initializes DAO-classes and sets the main Scene of the applications
+ * 
+ */
     @Override
     public void init() throws Exception {
         
@@ -33,17 +43,16 @@ public class Main extends Application {
 
         mainScene = new Scene(mainPane);
     }
-
+ /**
+ * Start the application and sets the stage
+ * 
+ */
     @Override
     public void start(Stage stage) throws Exception {
         this.stage = stage;
         stage.setTitle("BeerRating");
-        setMainScene();
-        stage.show();
-    }
-    
-    public void setMainScene() {
         stage.setScene(mainScene);
+        stage.show();
     }
 
     public static void main(String[] args) {

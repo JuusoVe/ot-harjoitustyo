@@ -105,15 +105,33 @@ public class ReviewController implements Initializable {
         currentReview.updateAverage();
         averageLabel.setText(String.valueOf(currentReview.getAverage()));
     }
+    
+ /**
+ * Sets the mainSceneController parent for this ReviewController
+ * 
+ * @param mainSceneController the mainSceneController instance to set
+ */  
 
     public void setMainSceneController(MainSceneController mainSceneController) {
         this.mainSceneController = mainSceneController;
     }
-
+ /**
+ * Return the currentReview
+ * @return the current displayed Review object
+ */  
+      
     public Review getCurrentReview() {
         return currentReview;
     }
-
+ /**
+ * Gets all values from the UI-elements and return a Review with the values set
+ * 
+ * @param review the Review object to set the values to from the UI
+ * 
+ * @return A review object with all values set from the UI
+ */  
+    
+    
     public Review getValuesFromUi(Review review) {
         Review toAdd = review;
         toAdd.setName(beerNameField.getText());
@@ -131,6 +149,12 @@ public class ReviewController implements Initializable {
         return review;
     }
     
+ /**
+ * Sets the parameter Review object's values to the UI
+ * 
+ * @param review object from which to set the values
+ * 
+ */       
     public void setCurrentReview(Review review) {
         currentReview = review;
         beerNameField.setText(currentReview.getName());
@@ -168,8 +192,7 @@ public class ReviewController implements Initializable {
         
     }
     
-    
-
+     
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
