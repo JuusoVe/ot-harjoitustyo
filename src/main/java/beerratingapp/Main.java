@@ -1,5 +1,6 @@
 package beerratingapp;
 
+import beerratingapp.ui.FileFXMLLoader;
 import beerratingapp.ui.MainSceneController;
 import javafx.application.Application;
 import static javafx.application.Application.launch;
@@ -8,8 +9,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import beerratingapp.domain.BeerRatingService;
-import beerratingapp.dao.FileReviewDao;
-import beerratingapp.dao.FileAdvancedDao;
+import beerratingapp.dao.*;
 
 public class Main extends Application {
     
@@ -22,12 +22,10 @@ public class Main extends Application {
         
         String reviewsFile = "reviews.txt";
         String advancedFile = "advanced.txt";
-        beerRatingService = new BeerRatingService(new FileReviewDao(reviewsFile), new FileAdvancedDao(advancedFile));
-        
-        FXMLLoader mainSceneLoader = new FXMLLoader();
-        mainSceneLoader.setLocation(getClass().getResource("/main.fxml"));
+        beerRatingService = new BeerRatingService(new FileReviewDao(reviewsFile), new FileAdvancedDao(advancedFile),
+        new FileFXMLLoader());
+        FXMLLoader mainSceneLoader = beerRatingService.getViewFromFile("main");
         Parent mainPane = mainSceneLoader.load();
-        System.out.println(mainPane.getClass().getTypeName());
         MainSceneController mainSceneController = mainSceneLoader.getController();
         mainSceneController.setBeerRatingService(beerRatingService); 
         mainSceneController.setApplication(this);

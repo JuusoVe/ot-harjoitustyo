@@ -31,8 +31,6 @@ public class MainSceneController implements Initializable {
     private ListProperty<String> listProperty = new SimpleListProperty<>();
     private String displayedView;
     
-
-    
     @FXML
     private BorderPane mainPane;
     
@@ -54,7 +52,8 @@ public class MainSceneController implements Initializable {
     
     @FXML
     private void handleCreateButton(ActionEvent event) {
-        reviewController.setCurrentReview(new Review());
+        Review review = new Review();
+        reviewController.setCurrentReview(review);
     }
     
     public void saveReviewsList() {
@@ -80,10 +79,10 @@ public class MainSceneController implements Initializable {
         beerRatingService.saveAdvanced(advanced);
     }
     
-    public void backFromAdvanced(String beerName) {
+    public void backFromAdvanced(int id) {
         setReviewsView();
         for (Review review : reviewsList) {
-            if (review.getName().equals(beerName)) {
+            if (review.getId() == id) {
                 reviewController.setCurrentReview(review);
             }
         }    
@@ -104,8 +103,8 @@ public class MainSceneController implements Initializable {
         mainPane.setCenter(loadViewFromFile("review"));
     }
     
-    public void setAdvancedOnClick(String beerName) {
-        Advanced advanced = beerRatingService.getAdvancedFromFile(beerName);
+    public void setAdvancedOnClick(int reviewId) {
+        Advanced advanced = beerRatingService.getAdvancedFromFile(reviewId);
         setAdvancedView();
         advancedController.setCurrentAdvanced(advanced);
         
@@ -116,13 +115,12 @@ public class MainSceneController implements Initializable {
     }
     
     private Pane loadViewFromFile(String viewType) {
-        FXMLLoader sceneLoader = new FXMLLoader();
-        sceneLoader.setLocation(getClass().getResource("/" + viewType + ".fxml"));
+        FXMLLoader sceneLoader = beerRatingService.getViewFromFile(viewType);
         Pane pane = new Pane();
         try {
             pane = sceneLoader.load();
         } catch (Exception e) {
-            System.out.println("Failed to load " + viewType + ".fxml Error message: ");
+            System.out.println("MainSceneController failed to load " + viewType + ".fxml Error message: ");
             System.out.println(e.toString());
         }
         if (viewType.equals("review")) {

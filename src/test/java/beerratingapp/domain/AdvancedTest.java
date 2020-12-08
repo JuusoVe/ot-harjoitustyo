@@ -30,8 +30,8 @@ public class AdvancedTest {
 
     @Test
     public void testConsructorOnlyName() {
-        Advanced adv = new Advanced("beerName");
-        assertEquals("beerName".hashCode(),adv.id);
+        Advanced adv = new Advanced(12345);
+        assertTrue(12345 == adv.getReviewId());
         assertEquals(8, adv.hopScores.length);
         assertEquals(8, adv.maltScores.length);
         assertEquals("", adv.getNotes());

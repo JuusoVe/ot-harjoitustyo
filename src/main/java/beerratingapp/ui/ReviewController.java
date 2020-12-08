@@ -73,7 +73,7 @@ public class ReviewController implements Initializable {
 
     @FXML
     private void handleAdvanced(ActionEvent event) {
-        mainSceneController.setAdvancedOnClick(currentReview.getName());
+        mainSceneController.setAdvancedOnClick(currentReview.getId());
     }
     
     @FXML

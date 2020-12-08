@@ -7,7 +7,7 @@ import java.util.Random;
 
 public class Review {
     
-    private int advancedId;
+    private int id;
     private String name;
     private String brewery;
     private String style;
@@ -22,8 +22,8 @@ public class Review {
 
     
     
-    public Review(String name, String brewery, String style, String date, String notes, double abv, double ibu, double og, int[] partScores, double average) {
-        this.advancedId = -1;
+    public Review(int id, String name, String brewery, String style, String date, String notes, double abv, double ibu, double og, int[] partScores, double average) {
+        this.id = id;
         this.name = name;
         this.brewery = brewery;
         this.style = style;
@@ -37,6 +37,8 @@ public class Review {
     }
     
     public Review() {
+        Random r = new Random();
+        this.id = r.nextInt(Integer.MAX_VALUE);
         this.partScores = new int[4];
     }
     
@@ -145,6 +147,12 @@ public class Review {
     public double getOg() {
         return og;
     }
+
+    public int getId() {
+        return id;
+    }
+    
+    
 
     @Override
     public boolean equals(Object obj) {

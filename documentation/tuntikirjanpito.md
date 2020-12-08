@@ -31,6 +31,8 @@
 |03.12.2020|3|finished all ui interactions for advanced
 |03.12.2020|1|created FileAdvancedDao tests and Advanced tests
 |03.12.2020|3|updated architecture, started javadoc, started user instructions
+|07.12.2020|x|refactored ui to its own package, created fxml-dao, updated documentation accordingly
+|07.12.2020|x|implemented better id system and review-advanced matching
 |----------|-|------------------------------------------|
 |TOTAL|57|	|
 

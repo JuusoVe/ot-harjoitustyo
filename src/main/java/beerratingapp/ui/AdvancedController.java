@@ -76,7 +76,7 @@ public class AdvancedController implements Initializable {
     
     @FXML
     private void handleBackButton(ActionEvent event) {
-        mainSceneController.backFromAdvanced(currentAdvanced.getReviewName());    
+        mainSceneController.backFromAdvanced(currentAdvanced.getReviewId());    
     }
     
     @FXML

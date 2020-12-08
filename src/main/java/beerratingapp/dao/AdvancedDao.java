@@ -7,6 +7,6 @@ public interface AdvancedDao {
     
     Advanced saveAdvanced(Advanced advanced) throws Exception;
     
-    Advanced getByBeerName(String name);
+    Advanced getByReviewId(int reviewId);
     
 }

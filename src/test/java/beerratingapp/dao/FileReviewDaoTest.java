@@ -30,7 +30,7 @@ public class FileReviewDaoTest {
         
         File revFile = testFolder.newFile("testfile_revs.txt");
         try (FileWriter file = new FileWriter(revFile.getAbsolutePath())) {
-            file.write("testName;testBrew;testSty;testDate;a made up highly elitist description;6.5;40;1.055;3, 4, 5, 3;3.0\n");
+            file.write("12345;testName;testBrew;testSty;testDate;a made up highly elitist description;6.5;40;1.055;3, 4, 5, 3;3.0\n");
         }
         
         dao = new FileReviewDao(revFile.getAbsolutePath());        

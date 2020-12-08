@@ -18,12 +18,12 @@ public class FakeAdvancedDao implements AdvancedDao {
     public FakeAdvancedDao(String file) throws Exception {
         advancedList = new ArrayList<>();
         
-        Advanced adv1 = new Advanced("testName");
+        Advanced adv1 = new Advanced(3216548);
         adv1.setHopScores(new int[]{1, 2, 3, 4, 1, 2, 3, 4});
         adv1.setMaltScores(new int[]{1, 2, 3, 4, 1, 2, 3, 4});
         adv1.setNotes("beeeaadadadadadadada");
         
-        Advanced adv2 = new Advanced("testBeer");
+        Advanced adv2 = new Advanced(654848463);
         adv2.setHopScores(new int[]{1, 2, 3, 4, 3, 2, 3, 4});
         adv2.setMaltScores(new int[]{4, 2, 3, 4, 1, 1, 3, 4});
         adv2.setNotes("aadadaefaefafeadadadadada");
@@ -38,20 +38,20 @@ public class FakeAdvancedDao implements AdvancedDao {
 
     
     @Override
-    public Advanced getByBeerName(String name) {
+    public Advanced getByReviewId(int id) {
         for (Advanced adv:this.advancedList) {
-            if (adv.getReviewName().equals(name)) {
+            if (adv.getReviewId() == id) {
                 return adv;
             }
         }
-        return new Advanced(name);
+        return new Advanced(654846);
     }
     
     @Override
     public Advanced saveAdvanced(Advanced advanced) throws Exception {
         boolean asNew = true;
         for (int i = 0; i < advancedList.size(); i++) {
-            if (advancedList.get(i).getId() == advanced.getId()) {
+            if (advancedList.get(i).getReviewId() == advanced.getReviewId()) {
                 advancedList.set(i, advanced);
                 asNew = false;
             }

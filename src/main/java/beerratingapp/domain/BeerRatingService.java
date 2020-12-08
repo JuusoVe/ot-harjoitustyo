@@ -1,20 +1,21 @@
 package beerratingapp.domain;
-import java.util.*;
-import beerratingapp.dao.FileReviewDao;
-import beerratingapp.dao.ReviewDao;
-import beerratingapp.dao.AdvancedDao;
-import beerratingapp.dao.FileAdvancedDao;
+import beerratingapp.ui.FileFXMLLoader;
+import java.util.ArrayList;
+import beerratingapp.dao.*;
 import beerratingapp.ui.MainSceneController;
+import javafx.fxml.FXMLLoader;
 
 
 public class BeerRatingService {
 
     private ReviewDao reviewDao;
     private AdvancedDao advancedDao;
+    private FileFXMLLoader fileFXMLDao;
     
-    public BeerRatingService(ReviewDao reviewDao, AdvancedDao advancedDao) {
+    public BeerRatingService(ReviewDao reviewDao, AdvancedDao advancedDao, FileFXMLLoader fileFXMLDao) {
         this.reviewDao = reviewDao;
         this.advancedDao = advancedDao;
+        this.fileFXMLDao = fileFXMLDao;
     }
     
     public boolean saveReviewsList(ArrayList<Review> reviewsList) {
@@ -39,13 +40,11 @@ public class BeerRatingService {
         return reviewDao.getAll();
     }
     
-    public Advanced getAdvancedFromFile(String beerName) {
-        return advancedDao.getByBeerName(beerName);
+    public Advanced getAdvancedFromFile(int reviewId) {
+        return advancedDao.getByReviewId(reviewId);
     }
-
     
-    
-    
-    
-    
+    public FXMLLoader getViewFromFile(String viewType) {
+        return fileFXMLDao.loadViewFromFile(viewType);
+    }
 }

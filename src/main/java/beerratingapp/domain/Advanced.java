@@ -11,7 +11,7 @@ package beerratingapp.domain;
  */
 public class Advanced {
     
-    int id;
+    int reviewId;
     int[] hopScores;
     int[] maltScores;
     String notes;
@@ -25,25 +25,24 @@ public class Advanced {
  * @param   reviewName   Name of the Review Object 
  */
     
-    public Advanced(String reviewName) {
+    public Advanced(int reviewId) {
         
-        this.reviewName = reviewName;
+        this.reviewId = reviewId;
         this.hopScores = new int[8]; //0 floral, 1 fruity, 2 citrus, 3 herbal, 4 grassy, 5 earthy, 6 piney, 7 spicy
         this.maltScores = new int[8]; //0 caramel, 1 biscuit, 2 earthy, 3 nutty, 4 chocolate, 5 coffe, 6 roast, 7 tart
         this.notes = "";
-        this.id = reviewName.hashCode();
     }
 
-    public Advanced(int id, String reviewName, int[] hopScores, int[] maltScores, String notes) {
-        this.id = id;
+    public Advanced(int reviewId, String reviewName, int[] hopScores, int[] maltScores, String notes) {
+        this.reviewId = reviewId;
         this.hopScores = hopScores;
         this.maltScores = maltScores;
         this.notes = notes;
         this.reviewName = reviewName;
     }
 
-    public int getId() {
-        return id;
+    public int getReviewId() {
+        return reviewId;
     }
 
     public int[] getHopScores() {

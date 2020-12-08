@@ -13,12 +13,6 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.testfx</groupId>
-            <artifactId>testfx-junit</artifactId>
-            <version>4.0.15-alpha</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
             <version>12.0.2</version>
@@ -27,12 +21,6 @@
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
             <version>12.0.2</version>
-        </dependency>
-        <dependency>
-            <groupId>org.testfx</groupId>
-            <artifactId>testfx-core</artifactId>
-            <version>4.0.16-alpha</version>
-            <scope>test</scope>
         </dependency>
     </dependencies>
     <build>
@@ -51,9 +39,7 @@
             <version>0.8.3</version>
             <configuration>
                         <excludes>
-                            <exclude>**/MainSceneController.*</exclude>
-                            <exclude>**/ReviewController.*</exclude>
-                            <exclude>**/AdvancedController.*</exclude>
+                            <exclude>beerratingapp/ui/*</exclude>
                         </excludes>
             </configuration>
             <executions>

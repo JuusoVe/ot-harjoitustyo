@@ -36,10 +36,9 @@ public class FileAdvancedDaoTest {
     @Test
     public void advancedObjectContentFromFileIsReadCorrectly() {
         
-        Advanced adv = dao.getByBeerName("testName");
+        Advanced adv = dao.getByReviewId(32155321);
 
-        assertEquals("testName", adv.getReviewName());
-        assertEquals(32155321, adv.getId());
+        assertEquals(32155321, adv.getReviewId());
         assertEquals(1, adv.getHopScores()[0]);
         assertEquals(2, adv.getHopScores()[1]);
         assertEquals(3, adv.getHopScores()[2]);
@@ -61,7 +60,7 @@ public class FileAdvancedDaoTest {
     
     @Test
     public void advancedObjectSaveToFile() {
-        Advanced adv = new Advanced("saveAdvTest");
+        Advanced adv = new Advanced(12345);
         adv.setHopScores(new int[]{1, 2, 3, 4, 1, 2, 3, 4});
         adv.setMaltScores(new int[]{1, 2, 3, 4, 1, 2, 3, 4});
         adv.setNotes("aadadadadadadada");
@@ -71,7 +70,7 @@ public class FileAdvancedDaoTest {
             System.out.println("FileAdvancedDaoTest advancedObjectSaveToFile failed. Error: ");
             System.out.println(e.toString());
         }
-        adv = dao.getByBeerName("saveAdvTest");
+        adv = dao.getByReviewId(12345);
         assertEquals(3, adv.getHopScores()[2]);
         assertEquals("aadadadadadadada", adv.getNotes());
     }
