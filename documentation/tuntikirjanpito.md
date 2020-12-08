@@ -33,6 +33,8 @@
 |03.12.2020|3|updated architecture, started javadoc, started user instructions
 |07.12.2020|x|refactored ui to its own package, created fxml-dao, updated documentation accordingly
 |07.12.2020|x|implemented better id system and review-advanced matching
+|07.12.2020|x|bug fixes
+|07.12.2020|x|created form validators for double fields
 |----------|-|------------------------------------------|
 |TOTAL|57|	|
 

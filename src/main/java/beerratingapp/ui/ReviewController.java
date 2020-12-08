@@ -11,7 +11,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Slider;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.Label;
-
+import javax.swing.event.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import beerratingapp.ui.MainSceneController;
 
 public class ReviewController implements Initializable {
@@ -78,35 +79,28 @@ public class ReviewController implements Initializable {
     
     @FXML
     private void handleAppearanceSlider() {       
-        int[] newPartScores = currentReview.getPartScores();
-        newPartScores[0] = (int) appearanceSlider.getValue();
-        this.currentReview.setPartScores(newPartScores);
-        currentReview.updateAverage();
-        averageLabel.setText(String.valueOf(currentReview.getAverage()));
+        handlePartialScoreSlider(appearanceSlider, 0);
     }
     
     @FXML
     private void handleSmellSlider() {
-        int[] newPartScores = currentReview.getPartScores();
-        newPartScores[1] = (int) smellSlider.getValue();
-        this.currentReview.setPartScores(newPartScores);
-        currentReview.updateAverage();
-        averageLabel.setText(String.valueOf(currentReview.getAverage()));
+        handlePartialScoreSlider(smellSlider, 1);
+    }
+        
+    @FXML
+    private void handleTasteSlider() {
+        handlePartialScoreSlider(tasteSlider, 2);
     }
     
     @FXML
     private void handleMouthFeelSlider() {
-        int[] newPartScores = currentReview.getPartScores();
-        newPartScores[3] = (int) mouthFeelSlider.getValue();
-        this.currentReview.setPartScores(newPartScores);
-        currentReview.updateAverage();
-        averageLabel.setText(String.valueOf(currentReview.getAverage()));
+        handlePartialScoreSlider(mouthFeelSlider, 3);
     }
+
     
-    @FXML
-    private void handleTasteSlider() {
+    private void handlePartialScoreSlider(Slider charSlider, int charIndex) {
         int[] newPartScores = currentReview.getPartScores();
-        newPartScores[2] = (int) tasteSlider.getValue();
+        newPartScores[charIndex] = (int) charSlider.getValue();
         this.currentReview.setPartScores(newPartScores);
         currentReview.updateAverage();
         averageLabel.setText(String.valueOf(currentReview.getAverage()));
@@ -155,11 +149,32 @@ public class ReviewController implements Initializable {
         notesArea.setText(currentReview.getNotes());
     }
     
+    private void setDoubleFormValidators() {
+        abvField.textProperty().addListener((observable, oldValue, newValue) -> {
+            if (!newValue.matches("\\d{0,2}([\\.]\\d{0,1})?")) {
+                abvField.setText(oldValue);
+            }
+        });
+        ibuField.textProperty().addListener((observable, oldValue, newValue) -> {
+            if (!newValue.matches("\\d{0,3}([\\.]\\d{0,1})?")) {
+                ibuField.setText(oldValue);
+            }
+        });
+        ogField.textProperty().addListener((observable, oldValue, newValue) -> {
+            if (!newValue.matches("\\d{0,1}([\\.]\\d{0,4})?")) {
+                ogField.setText(oldValue);
+            }
+        });
+        
+    }
+    
     
 
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        setDoubleFormValidators();
+        
 
     }    
 }

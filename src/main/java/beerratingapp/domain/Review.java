@@ -59,12 +59,12 @@ public class Review {
         this.average = 1.0 * sum / weiSum;   
     }
  /**
- * Sets the partial scores of this Review Object and validates the values to be between 1-5.
+ * Sets the partial scores of this Review Object and validates the values to be between 0-5.
  * @param partScores int[] of length 4 with partial scores in order:
  * 0 appearance, 1 smell, 2 taste, 3 mouthfeel
  */
     
-    public void setPartScores(int[] partScores) { //force minimums and maximums before setting
+    public void setPartScores(int[] partScores) {
         for (int i = 0; i < partScores.length; i++) {
             if (partScores[i] < 0) {
                 partScores[i] = 0;

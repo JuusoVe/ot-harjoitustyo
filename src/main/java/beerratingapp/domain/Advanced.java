@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package beerratingapp.domain;
 
 /**
@@ -22,7 +18,7 @@ public class Advanced {
  * attached to a Review Object
  * 
  *
- * @param   reviewName   Name of the Review Object 
+ * @param   reviewId   id of the Review object attached to this Advanced object 
  */
     
     public Advanced(int reviewId) {
@@ -72,6 +68,12 @@ public class Advanced {
     public void setNotes(String notes) {
         this.notes = notes;
     }
+
+    public void setReviewId(int reviewId) {
+        this.reviewId = reviewId;
+    }
+    
+    
     
     
     

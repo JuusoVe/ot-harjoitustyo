@@ -76,6 +76,18 @@ public class MainSceneController implements Initializable {
     }
     
     public void saveAdvanced(Advanced advanced) {
+        boolean advancedIsAttached = false;
+        for (Review review: reviewsList) {
+            if (advanced.getReviewId() == review.getId()) {
+                advancedIsAttached = true;
+            }
+        }
+        if (!advancedIsAttached) {
+            Review review = new Review();
+            reviewsList.add(review);
+            advanced.setReviewId(review.getId());
+            updateReviewsListView();
+        }
         beerRatingService.saveAdvanced(advanced);
     }
     
