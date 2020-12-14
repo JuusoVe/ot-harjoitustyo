@@ -38,6 +38,10 @@
 |08.12.2020|2|documentation updates
 |14.12.2020||changing javafx version to get display to work on linux, tested results
 |14.12.2020||remove harmful characters from String inputs
+|14.12.2020||created integration tests
+|14.12.2020||documentation updates, cleaning up code, cleaning up repository
+
+
 |----------|-|------------------------------------------|
 |TOTAL|64|	|
 

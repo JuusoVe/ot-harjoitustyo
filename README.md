@@ -6,8 +6,9 @@ It is being built as a course assignment for Helsinki University's course Ohjelm
 
 ## Documentation
 [user_instructions.md](https://github.com/JuusoVe/ot-harjoitustyo/blob/master/documentation/user_instructions.md) <br>
-[initial_requirements.md](https://github.com/JuusoVe/ot-harjoitustyo/blob/master/documentation/initial_requirements.md) <br>
+[specifications.md](https://github.com/JuusoVe/ot-harjoitustyo/blob/master/documentation/specifications.md) <br>
 [architecture.md](https://github.com/JuusoVe/ot-harjoitustyo/blob/master/documentation/architecture.md) <br>
+[testing.md](https://github.com/JuusoVe/ot-harjoitustyo/blob/master/documentation/testing.md) <br>
 [worktracker.md](https://github.com/JuusoVe/ot-harjoitustyo/blob/master/documentation/tuntikirjanpito.md) 
 
 ### Testing

@@ -24,6 +24,7 @@ Clicking the Advanced button in the Review-view will open the Advanced notes for
 - Use the slider to describe the beer and write notes for more info
 - The advanced info will stay attached to the original review
 - Click Back-button to return to the Review or open another one from the list view.
+- Remember to save!
 
 
 
