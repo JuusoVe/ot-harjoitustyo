@@ -42,5 +42,5 @@
 |14.12.2020|3|documentation updates, cleaning up code, cleaning up repository
 |14.12.2020|1|final testing on different devices
 |----------|-|------------------------------------------|
-|TOTAL|64| |	|
+|TOTAL|71| |	|
 

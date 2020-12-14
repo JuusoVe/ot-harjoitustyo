@@ -44,8 +44,10 @@ JavaDoc is generated with
 mvn javadoc:javadoc
 ```
 
+Javadoc will be generated to target/site/apidocs/index.html
 
 ### Releases
 
 [Week 5 release](https://github.com/JuusoVe/ot-harjoitustyo/releases/tag/week5) <br>
 [Week 6 release](https://github.com/JuusoVe/ot-harjoitustyo/releases/tag/week6)
+[final release](https://github.com/JuusoVe/ot-harjoitustyo/releases/tag/final)
