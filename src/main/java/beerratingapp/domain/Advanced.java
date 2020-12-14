@@ -35,6 +35,10 @@ public class Advanced {
         this.notes = notes;
         this.reviewName = reviewName;
     }
+    
+    private String removeBannedCharacters(String input) {
+        return input.replaceAll("[;]", "");
+    }
 
     public int getReviewId() {
         return reviewId;
@@ -65,7 +69,7 @@ public class Advanced {
     }
 
     public void setNotes(String notes) {
-        this.notes = notes;
+        this.notes = removeBannedCharacters(notes);
     }
 
     public void setReviewId(int reviewId) {

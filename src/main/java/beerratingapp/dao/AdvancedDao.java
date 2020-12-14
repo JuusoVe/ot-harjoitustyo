@@ -1,14 +1,11 @@
- /**
- * Abstract DAO class for the Advanced class
- * 
- *
- */
-
-
 package beerratingapp.dao;
 
-import java.util.ArrayList;
 import beerratingapp.domain.Advanced;
+
+ /**
+  * Interface class for ReviewDaos
+  * 
+  */ 
 
 public interface AdvancedDao {
     

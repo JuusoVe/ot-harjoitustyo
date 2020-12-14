@@ -36,6 +36,8 @@
 |08.12.2020|1|bug fixes
 |08.12.2020|2|created form validators for double fields, new release
 |08.12.2020|2|documentation updates
+|14.12.2020||changing javafx version to get display to work on linux, tested results
+|14.12.2020||remove harmful characters from String inputs
 |----------|-|------------------------------------------|
 |TOTAL|64|	|
 

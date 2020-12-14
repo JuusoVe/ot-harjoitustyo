@@ -6,13 +6,15 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.TextField;
-import javafx.scene.control.Button;
 import javafx.scene.control.Slider;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.Label;
 
-import beerratingapp.ui.MainSceneController;
+
+ /**
+  * FXML Controller class for the advanced child scene
+  * 
+  */ 
 
 public class AdvancedController implements Initializable {
     
@@ -86,6 +88,8 @@ public class AdvancedController implements Initializable {
     }    
 /**
  * sets the the parent mainSceneController for this AdvancedController
+ * 
+ * @param mainSceneController the controller of the mainScene
  */    
     public void setMainSceneController(MainSceneController mainSceneController) {
         this.mainSceneController = mainSceneController;

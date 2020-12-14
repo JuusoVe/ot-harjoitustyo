@@ -9,10 +9,6 @@ import org.junit.Rule;
 import org.junit.rules.TemporaryFolder;
 import beerratingapp.domain.Advanced;
 
-/**
- *
- * @author juuso
- */
 public class FileAdvancedDaoTest {
     
     @Rule

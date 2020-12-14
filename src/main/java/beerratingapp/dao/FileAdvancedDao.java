@@ -14,6 +14,14 @@ public class FileAdvancedDao implements AdvancedDao {
     public ArrayList<Advanced> advancedList;
     private String file;
     
+ /**
+ * Constructor that reads advanced-file into a ArrayList. Creates a fresh advanced-file if unable to read.
+ *
+ * @param   file   String to name the file to be read
+ *
+ * 
+ */
+    
     public FileAdvancedDao(String file) throws Exception {
         advancedList = new ArrayList<>();
         this.file = file;
@@ -46,6 +54,7 @@ public class FileAdvancedDao implements AdvancedDao {
         
     }
     
+    
     private void save() throws Exception {
         try (FileWriter writer = new FileWriter(new File(file))) {
             for (Advanced advanced: advancedList) {
@@ -57,7 +66,13 @@ public class FileAdvancedDao implements AdvancedDao {
             }
         }
     }    
-
+ /**
+ * Returns Advanced object by reviewId
+ *
+ * @param   reviewId id of the Review attached to the requested Advanced object
+ *
+ * @return Advanced object to return based on the id request. Return new instance of Advanced if not found by id. 
+ */
     
     @Override
     public Advanced getByReviewId(int reviewId) {
@@ -68,6 +83,14 @@ public class FileAdvancedDao implements AdvancedDao {
         }
         return new Advanced(reviewId);
     }
+    
+ /**
+ * Returns Advanced object by reviewId
+ *
+ * @param advanced Advanced object to save. Replaces old by id and saves as new if not found.
+ *
+ * @return advanced object saved 
+ */    
     
     @Override
     public Advanced saveAdvanced(Advanced advanced) throws Exception {

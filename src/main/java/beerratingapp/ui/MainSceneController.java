@@ -19,6 +19,11 @@ import beerratingapp.domain.Advanced;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXMLLoader;
 
+ /**
+  * FXML Controller class for the parent scene with the reviews-list included
+  * 
+  */ 
+
 public class MainSceneController implements Initializable {
     
     private BeerRatingService beerRatingService;
@@ -52,16 +57,16 @@ public class MainSceneController implements Initializable {
     
     @FXML
     private void handleCreateButton(ActionEvent event) {
+        if (displayedView.equals("advanced")) {
+            setReviewsView();
+        }
         Review review = new Review();
         reviewController.setCurrentReview(review);
     }
     
  /**
  * 
- * 
- * 
- * 
- * 
+ * Passes the current reviewsList to BeerRatingService to be saved file.
  */ 
     
     public void saveReviewsList() {
@@ -78,11 +83,17 @@ public class MainSceneController implements Initializable {
             reviewsList.set(indexOf, toAdd);
         }
         beerRatingService.saveReviewsList(reviewsList);
-        beerRatingService.getAll();
+        beerRatingService.getReviewsFromFile();
         updateReviewsListView();
         
     }
-    
+ /**
+  * Checks if currently displayed Advanced object is attached to a review. If no, creates a new Review and attaches it by id.
+  * Passes the Advanced object to BeerRatingService to be saved.
+  * 
+  * @param advanced Object to be checked for attachment and then saved
+  * 
+  */        
     public void saveAdvanced(Advanced advanced) {
         boolean advancedIsAttached = false;
         for (Review review: reviewsList) {
@@ -98,6 +109,13 @@ public class MainSceneController implements Initializable {
         }
         beerRatingService.saveAdvanced(advanced);
     }
+ /**
+  * Handles UI-changes when returning from Advanced view. Sets review based on id.
+  * 
+  * @param id of the advanced object to return to the attached review view
+  * 
+  */      
+    
     
     public void backFromAdvanced(int id) {
         setReviewsView();
@@ -107,6 +125,12 @@ public class MainSceneController implements Initializable {
             }
         }    
     }
+
+ /**
+  * initialization sequence on app start up. Gets reviews list from service. Sets review-view. Sets first review to display.
+  * 
+  */   
+
     
     public void setReviewOnInit() {
         getReviewsFromService();
@@ -122,13 +146,21 @@ public class MainSceneController implements Initializable {
     private void setReviewsView() {
         mainPane.setCenter(loadViewFromFile("review"));
     }
-    
+ /**
+  * Request advanced data for BeerRatingService. Set advanced view. Set the requested advanced to the view.
+  * @param reviewId the of the review to find the attached advanced data
+  */       
+        
     public void setAdvancedOnClick(int reviewId) {
         Advanced advanced = beerRatingService.getAdvancedFromFile(reviewId);
         setAdvancedView();
-        advancedController.setCurrentAdvanced(advanced);
-        
+        advancedController.setCurrentAdvanced(advanced);       
     }
+    
+ /**
+  * load advanced-view from file and set it to display
+  * 
+  */   
     
     private void setAdvancedView() {
         mainPane.setCenter(loadViewFromFile("advanced"));
@@ -155,12 +187,17 @@ public class MainSceneController implements Initializable {
         return pane;
     }
     
+ /**
+  * Request reviewsList from BeerRatingService
+
+  * 
+  */       
     
     public void getReviewsFromService() {
-        reviewsList = beerRatingService.getAll();
+        reviewsList = beerRatingService.getReviewsFromFile();
     }
     
-    public void updateReviewsListView() {
+    private void updateReviewsListView() {
         reviewsListNames = new ArrayList<>();
         for (Review review : reviewsList) {
             reviewsListNames.add(review.getName());
@@ -180,6 +217,5 @@ public class MainSceneController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-
     }    
 }

@@ -1,11 +1,7 @@
 package beerratingapp.domain;
 
 import beerratingapp.dao.*;
-import java.io.File;
-import java.io.FileWriter;
 import java.util.ArrayList;
-import java.util.Scanner;
-import beerratingapp.domain.Review;
 /**
  *
  * @author juuso

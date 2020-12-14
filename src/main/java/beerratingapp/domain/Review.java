@@ -64,6 +64,8 @@ public class Review {
  * 0 appearance, 1 smell, 2 taste, 3 mouthfeel
  */
     
+    
+    
     public void setPartScores(int[] partScores) {
         for (int i = 0; i < partScores.length; i++) {
             if (partScores[i] < 0) {
@@ -76,24 +78,28 @@ public class Review {
         this.partScores = partScores;
     }
     
+    private String removeBannedCharacters(String input) {
+        return input.replaceAll("[;]", "");
+    }
+    
     public void setName(String name) {
-        this.name = name;
+        this.name = removeBannedCharacters(name);
     }
 
     public void setBrewery(String brewery) {
-        this.brewery = brewery;
+        this.brewery = removeBannedCharacters(brewery);
     }
 
     public void setStyle(String style) {
-        this.style = style;
+        this.style = removeBannedCharacters(style);
     }
     
     public void setDate(String date) {
-        this.date = date;
+        this.date = removeBannedCharacters(date);
     }
 
     public void setNotes(String notes) {
-        this.notes = notes;
+        this.notes = removeBannedCharacters(notes);
     }
 
     public void setAbv(double abv) {

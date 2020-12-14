@@ -1,14 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package beerratingapp.domain;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -18,24 +9,6 @@ import static org.junit.Assert.*;
  */
 public class ReviewTest {
     
-    public ReviewTest() {
-    }
-    
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
-    @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
-    }
     
     @Test
     public void setPartScoresForcesMinAndMax() {
@@ -86,13 +59,22 @@ public class ReviewTest {
         
     }
     
-    
-    
-    
+    @Test
+    public void settersWork() {
+        Review rev = new Review();
+        rev.setBrewery(";;;;brew;");
+        rev.setStyle(";;;;sahti;");
+        rev.setNotes(";;;;hope no comma;;;s here;");
+        rev.setDate(";;;;January1;");
+        rev.setIbu(40);
+        rev.setAbv(4.2);
+        rev.setOg(1.055);
+        assertEquals("brew", rev.getBrewery());
+        assertEquals("sahti", rev.getStyle());
+        assertEquals("hope no commas here", rev.getNotes());
+        assertTrue(4.2 == rev.getAbv());
+        assertTrue(40 == rev.getIbu());
+        assertTrue(1.055 == rev.getOg());
+    }
 
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
 }

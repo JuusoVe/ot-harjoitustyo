@@ -15,6 +15,12 @@ import javax.swing.event.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import beerratingapp.ui.MainSceneController;
 
+
+ /**
+  * FXML Controller class for review-view. Child scene of the Main view.
+  * 
+  */ 
+
 public class ReviewController implements Initializable {
     
     
