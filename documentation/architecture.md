@@ -35,11 +35,19 @@ Initializing the application:
 
 Creating a new review:
 
+![create button sequence!](https://github.com/JuusoVe/ot-harjoitustyo/blob/master/documentation/create_button_sequence.png?raw=true)
+
 Saving a review:
+
+![save review button sequence!](https://github.com/JuusoVe/ot-harjoitustyo/blob/master/documentation/save_button_sequence.png?raw=true)
 
 Opening a review from list view:
 
+![list click sequence!](https://github.com/JuusoVe/ot-harjoitustyo/blob/master/documentation/list_click_sequence.png?raw=true)
+
 Creating an advanced object:
+
+![advanced button sequence!](https://github.com/JuusoVe/ot-harjoitustyo/blob/master/documentation/advanced_button_sequence.png?raw=true)
 
 Saving an advanced object:
 
