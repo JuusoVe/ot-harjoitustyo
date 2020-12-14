@@ -36,12 +36,11 @@
 |08.12.2020|1|bug fixes
 |08.12.2020|2|created form validators for double fields, new release
 |08.12.2020|2|documentation updates
-|14.12.2020||changing javafx version to get display to work on linux, tested results
-|14.12.2020||remove harmful characters from String inputs
-|14.12.2020||created integration tests
-|14.12.2020||documentation updates, cleaning up code, cleaning up repository
-
-
+|14.12.2020|1|changing javafx version to get display to work on linux, tested results
+|14.12.2020|1|remove harmful characters from String inputs
+|14.12.2020|1|created integration tests
+|14.12.2020|3|documentation updates, cleaning up code, cleaning up repository
+|14.12.2020|1|final testing on different devices
 |----------|-|------------------------------------------|
-|TOTAL|64|	|
+|TOTAL|64| |	|
 
