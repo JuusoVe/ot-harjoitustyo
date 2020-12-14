@@ -49,7 +49,6 @@ Creating an advanced object:
 
 ![advanced button sequence!](https://github.com/JuusoVe/ot-harjoitustyo/blob/master/documentation/advanced_button_sequence.png?raw=true)
 
-Saving an advanced object:
 
 
 

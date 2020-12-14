@@ -10,7 +10,7 @@ The applications has 3 views
 - Main view showing a list of all reviews. This view is always displayed
 - Review view showing basic information of the review
 - Advanced view for breaking down the characteristics and more room for notes
-- More details about the UI in the ![user instructions!](https://github.com/JuusoVe/ot-harjoitustyo/blob/master/documentation/user_instructions.md)
+- More details about the UI in the [user instructions](https://github.com/JuusoVe/ot-harjoitustyo/blob/master/documentation/user_instructions.md)
 
 ![UI views!](https://github.com/JuusoVe/ot-harjoitustyo/blob/master/documentation/ui_full.png?raw=true)
 
@@ -19,7 +19,7 @@ The applications has 3 views
 - Input fields for data and rating of beer characteristics
 - Possibility to open advanced views for deeper analysis of taste/smell
 - Data is saved to a file and retrieved upon start up
-- More details about the functionality in the ![user instructions!](https://github.com/JuusoVe/ot-harjoitustyo/blob/master/documentation/user_instructions.md)
+- More details about the functionality in the [user instructions](https://github.com/JuusoVe/ot-harjoitustyo/blob/master/documentation/user_instructions.md)
 
 ## Possible advanced functionality added later
 - User role and login for private reviews
